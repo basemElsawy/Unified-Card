@@ -1,6 +1,7 @@
 :root {
-  --main-background-clr: #84a790;
+  --main-background-clr: #84a790 !important;
   --drk-background-clr: #1d4a2f;
+  --dark-text: #468942;
   --light-background-clr: #a5c8b18e;
   --large-fs-lg-screen: 48px;
   --med-fs-lg-screen: 38px;
@@ -16,9 +17,27 @@
 }
 
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0px !important;
+  margin: 0px !important;
   box-sizing: border-box;
 
   font-family: "almarai";
+}
+
+.btn-primary {
+  background-color: var(--main-background-clr) !important;
+  border-color: var(--main-background-clr) !important;
+}
+
+.btn-outline-primary {
+  border-color: var(--main-background-clr) !important;
+  color: var(--main-background-clr) !important;
+}
+.btn-outline-primary:hover {
+  color: white !important;
+  background-color: var(--main-background-clr) !important;
+}
+
+.text-primary {
+  color: var(--main-background-clr) !important;
 }

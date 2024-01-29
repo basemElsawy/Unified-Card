@@ -1,1 +1,124 @@
-<div class="background"></div>
+<section class="h-100 container-fluid" [lang]="lang">
+  <div class="row h-100">
+    <div id="Login-content" class="col-lg-6">
+      <div id="login-heading" class="row justify-content-start">
+        <div class="col-6 col-md-12">
+          <h1 class="login-heading">Sign Up</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center form-parent">
+        <div class="form-wrapper col-xxl-7 col-xl-10 col-lg-10 col-md-9">
+          <form (ngSubmit)="submitForm()" [formGroup]="loginForm">
+            <div
+              class="p-2 sign-up-picture flex-md-column gap-2 row justify-content-center align-items-center"
+            >
+              <div class="col-5 w-25 col-md-2 shadow-pic img-fluid">
+                <img src="../../../assets/download.png" class="w-100" alt="" />
+              </div>
+              <div class="col-5 d-flex justify-content-end align-items-end">
+                <label
+                  for="image"
+                  class="btn btn-primary w-100 p-2 label-btn d-flex gap-3 justify-content-between align-items-center"
+                  ><div>Add picture</div>
+                  <div><i class="fa-solid fa-plus"></i></div
+                ></label>
+                <input
+                  type="file"
+                  formControlName="image"
+                  class="d-none"
+                  id="image"
+                />
+              </div>
+            </div>
+            <div class="p-2">
+              <input
+                type="text"
+                class="form-control p-2"
+                placeholder="Mobile Number"
+                formControlName="mobileNumber"
+                id=""
+              />
+            </div>
+            <div class="p-2">
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="form-control p-2"
+                formControlName="emailAddress"
+                id=""
+              />
+            </div>
+            <div class="p-2">
+              <input
+                type="email"
+                placeholder="National ID / Passport"
+                class="form-control p-2"
+                formControlName="identificationNumber"
+                id=""
+              />
+            </div>
+            <div
+              class="p-2 d-flex gap-2 justify-content-center align-items-center"
+            >
+              <input
+                type="text"
+                placeholder="User Name"
+                class="form-control p-2"
+                formControlName="userName"
+              />
+              <input
+                type="text"
+                placeholder="Full name"
+                class="form-control p-2"
+                formControlName="fullName"
+              />
+            </div>
+            <div class="p-2">
+              <input
+                type="email"
+                placeholder="Password"
+                class="form-control p-2"
+                formControlName="password"
+                id=""
+              />
+            </div>
+            <div class="p-2">
+              <input
+                type="email"
+                placeholder="Confirm Password"
+                class="form-control p-2"
+                id=""
+              />
+            </div>
+
+            <div class="buttons row p-2 gap-3">
+              <button class="btn btn-primary col-12 py-2">Sign up</button>
+              <div
+                class="col-12 d-flex justify-content-center align-items-center gap-2 forgot-password"
+              >
+                <p>Already have an account ?</p>
+                <button (click)="navigate()">Click Here</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Picture-animation"
+      class="picture-animation position-relative col-lg-6"
+    >
+      <div class="overlay position-absolute h-100 w-100"></div>
+      <img
+        src="../../../assets/left.png"
+        class="left-pic position-absolute"
+        alt=""
+      />
+      <img
+        src="../../../assets/right.png"
+        class="right-pic position-absolute"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
