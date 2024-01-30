@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterOutlet],
+  imports: [ReactiveFormsModule, RouterOutlet, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
+  providers: [],
 })
 export class LoginComponent {
   lang: string = 'en';

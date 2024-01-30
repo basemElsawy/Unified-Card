@@ -103,7 +103,12 @@
                 class="col-12 d-flex justify-content-center align-items-center gap-2 forgot-password"
               >
                 <p>Already have an account ?</p>
-                <button (click)="navigate()">Click Here</button>
+                <button
+                  [routerLink]="['/login']"
+                  routerLinkActive="router-link-active"
+                >
+                  Click Here
+                </button>
               </div>
             </div>
           </form>

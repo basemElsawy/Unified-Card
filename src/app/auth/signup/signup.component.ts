@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import {
+  Router,
+  RouterLink,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, RouterModule],
+  imports: [RouterOutlet, ReactiveFormsModule, RouterModule, RouterLink],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
 })
@@ -27,7 +32,7 @@ export class SignupComponent {
   submitForm() {
     console.log(this.signupForm.value);
   }
-  navigate() {
-    this.router.navigate(['/login']);
-  }
+  // navigate() {
+  //   this.router.navigate(['/login', 'signin']);
+  // }
 }
