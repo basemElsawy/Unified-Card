@@ -1,4 +1,4 @@
-.login-heading {
+.signup-heading {
   font-size: var(--large-fs-lg-screen);
   background-color: var(--main-background-clr);
   padding: 10px !important;
@@ -131,12 +131,112 @@ input::placeholder {
   background-color: var(--drk-background-clr) !important;
 }
 
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+  .picture-animation {
+    display: none;
+  }
+  .signup-heading {
+    font-size: var(--small-fs-lg-screen);
+    border-radius: 0px;
+  }
+  .form-parent {
+    height: 90dvh !important;
+  }
+  #Login-content {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
+      url("../../../assets/signup-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+  }
+  .sign-up-picture {
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+  }
+  label {
+    font-size: var(--xxsm-fs-lg-screen) !important;
+  }
+}
+
 @media screen and (min-width: 720px) and (max-width: 991px) {
   .picture-animation {
     display: none;
   }
-  .login-heading {
+  .signup-heading {
     font-size: var(--small-fs-lg-screen);
     border-radius: 0px;
+  }
+  .form-parent {
+    height: 90dvh !important;
+  }
+  #Login-content {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
+      url("../../../assets/signup-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+  }
+  .sign-up-picture {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  label {
+    font-size: var(--xxsm-fs-lg-screen) !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 720px) {
+  .picture-animation {
+    display: none;
+  }
+  .signup-heading {
+    font-size: var(--small-fs-lg-screen);
+    border-radius: 0px;
+  }
+  .form-parent {
+    height: 90vh !important;
+  }
+  #Login-content {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
+      url("../../../assets/signup-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+  }
+  .sign-up-picture {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  label {
+    font-size: var(--xxsm-fs-lg-screen) !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .picture-animation {
+    display: none;
+  }
+  .signup-heading {
+    font-size: var(--xsm-fs-lg-screen);
+    border-radius: 0px;
+  }
+  .form-parent {
+    height: 90vh !important;
+  }
+  #Login-content {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
+      url("../../../assets/signup-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+  }
+  .sign-up-picture {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  label {
+    font-size: var(--xxsm-fs-lg-screen) !important;
   }
 }

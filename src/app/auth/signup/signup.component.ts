@@ -11,10 +11,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupComponent {
   lang: string = 'en';
-  loginForm!: FormGroup<any>;
+  signupForm!: FormGroup<any>;
   constructor(private router: Router) {}
   ngOnInit() {
-    this.loginForm = new FormGroup({
+    this.signupForm = new FormGroup({
       userName: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required),
       mobileNumber: new FormControl('', Validators.required),
@@ -25,7 +25,7 @@ export class SignupComponent {
     });
   }
   submitForm() {
-    console.log(this.loginForm.value);
+    console.log(this.signupForm.value);
   }
   navigate() {
     this.router.navigate(['/login']);

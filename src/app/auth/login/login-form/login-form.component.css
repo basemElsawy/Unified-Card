@@ -74,7 +74,7 @@ input::placeholder {
 }
 
 .picture-animation {
-  background-image: url("../../../assets/login-background.jpg");
+  background-image: url("../../../../assets/login-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--drk-background-clr);
@@ -134,7 +134,7 @@ input::placeholder {
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../../assets/signup-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -162,7 +162,7 @@ input::placeholder {
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../../assets/signup-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -189,7 +189,7 @@ input::placeholder {
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../../assets/signup-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -216,7 +216,7 @@ input::placeholder {
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../../assets/signup-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
