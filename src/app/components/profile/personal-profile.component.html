@@ -1,12 +1,124 @@
-<section
+<header
   class="profile-header overflow-hidden container-fuild position-fixed top-0 end-0 start-0 h-25 container-fluid d-flex justify-content-end p-2"
 >
   <div class="circle c-1 position-absolute"></div>
   <div class="circle c-2 position-absolute"></div>
   <div class="home-btn">
-    <button class="btn white-border py-1 px-4 m-1 mx-5 text-white">Home</button>
+    <button
+      [routerLink]="['/']"
+      class="btn white-border py-1 px-4 m-1 mx-5 text-white"
+    >
+      <div>Home</div>
+      <i class="position-absolute fa-solid fa-house"></i>
+    </button>
   </div>
-</section>
-<section id="profile-section" class="profile-wrapper">
-  <div class="row"></div>
-</section>
+</header>
+<main class="main-content d-flex justify-content-center align-items-end">
+  <section
+    id="profile-section"
+    class="profile-wrapper container-xl container-md mb-2"
+  >
+    <div class="row gap-4 h-100">
+      <div
+        id="personal-data-content "
+        class="personal-data col-3 h-100 bg-white rounded"
+      >
+        <div class="row">
+          <div class="col-12 user-data-heading">hello</div>
+        </div>
+      </div>
+      <div id="meta-data-content" class="col-8 rounded h-100">
+        <div class="btn-group">
+          <!-- <button class="btn p-2 btn-1 bg-white px-4">My Trips</button>
+
+          <button class="btn p-2 btn-2 bg-white px-4">Balance</button>
+          <button class="btn p-2 btn-3 bg-white px-4">My Cards</button>
+          <button class="btn p-2 btn-4 bg-white px-4">History</button> -->
+          @for (button of buttons ; track button.id) {
+          <button
+            (click)="changeStateButton(button, button.link)"
+            [class]="
+              button.isActive
+                ? 'btn p-2 btn-1 bg-white px-4 nav-btns-content active-btn'
+                : 'btn p-2 btn-1 bg-white px-4  nav-btns-content'
+            "
+          >
+            {{ button.link }}
+          </button>
+
+          }
+        </div>
+        <div class="personal-data meta-container bg-white">
+          <div [class]="active === 'My Trips' ? active : 'inactive'">
+            <app-my-trips></app-my-trips>
+          </div>
+          <div [class]="active === 'My Card' ? active : 'inactive'">
+            <app-my-card></app-my-card>
+          </div>
+          <div [class]="active === 'Balance' ? active : 'inactive'">
+            <app-balance></app-balance>
+          </div>
+          <div [class]="active === 'History' ? active : 'inactive'">
+            <app-history></app-history>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- <router-outlet></router-outlet> -->
+<!-- <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <button class="px-4 button-first py-2" ngbNavLink>One</button>
+    <ng-template ngbNavContent>
+      <p class="bg-white content shadow-sm">
+        Raw denim you probably haven't heard of them jean shorts Austin.
+        Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+        Mustache cliche tempor, williamsburg carles vegan helvetica.
+        Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby
+        sweater eu banh mi, qui irure terry richardson ex squid. Aliquip
+        placeat salvia cillum iphone. Seitan aliquip quis cardigan
+        american apparel, butcher voluptate nisi qui.
+      </p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <button class="px-4 button-mid py-2" ngbNavLink>Two</button>
+    <ng-template ngbNavContent>
+      <p>
+        Exercitation +1 labore velit, blog sartorial PBR leggings next
+        level wes anderson artisan four loko farm-to-table craft beer
+        twee. Qui photo booth letterpress, commodo enim craft beer
+        mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo
+        nostrud organic, assumenda labore aesthetic magna delectus
+        mollit. Keytar helvetica VHS salvia yr, vero magna velit
+        sapiente labore stumptown. Vegan fanny pack odio cillum wes
+        anderson 8-bit, sustainable jean shorts beard ut DIY ethical
+        culpa terry richardson biodiesel. Art party scenester stumptown,
+        tumblr butcher vero sint qui sapiente accusamus tattooed echo
+        park.
+      </p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <button class="px-4 py-2" ngbNavLink>Three</button>
+    <ng-template ngbNavContent>
+      <p>
+        Sed commodo, leo at suscipit dictum, quam est porttitor sapien,
+        eget sodales nibh elit id diam. Nulla facilisi. Donec egestas
+        ligula vitae odio interdum aliquet. Duis lectus turpis, luctus
+        eget tincidunt eu, congue et odio. Duis pharetra et nisl at
+        faucibus. Quisque luctus pulvinar arcu, et molestie lectus
+        ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat
+        volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus
+        nisl enim, nec tristique ipsum euismod facilisis. Morbi ut
+        bibendum est, eu tincidunt odio. Orci varius natoque penatibus
+        et magnis dis parturient montes, nascetur ridiculus mus. Mauris
+        aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus
+        nec tortor vel tellus pulvinar feugiat.
+      </p>
+    </ng-template>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav" class="mt-2"></div> -->

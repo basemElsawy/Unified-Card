@@ -2,6 +2,54 @@
   background-color: var(--profile-header-bg) !important;
 }
 
+.personal-data {
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.215);
+}
+.profile-wrapper {
+  position: relative;
+  z-index: 1000;
+  height: 80vh;
+}
+.active {
+  display: block;
+}
+.user-data-heading {
+  height: 20vh;
+  background-color: var(--profile-header-bg) !important;
+}
+.inactive {
+  display: none;
+}
+.meta-container {
+  height: 74vh;
+  position: relative;
+  z-index: 10000;
+  border-radius: 0px 5px 5px 5px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.215);
+}
+.meta-data-content button {
+  border-radius: 5px !important;
+  border-radius: 5px !important;
+}
+.meta-data-content {
+  border-radius: 5px 0px 0px 0px !important;
+}
+.active-btn {
+  position: relative;
+  z-index: 100;
+  transform: scaleY(1.1) !important ;
+
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.215);
+  /* background-color: black !important; */
+}
+
+.main-content {
+  height: 100vh;
+}
+.content {
+  height: 74vh;
+  margin-block: 0px !important;
+}
 .circle {
   background-color: var(--profile-header-circles) !important;
   width: 500px;
@@ -24,11 +72,37 @@
   isolation: isolate;
 }
 .home-btn button {
-  transition: 0.3s ease all;
+  transition: background-color 0.2s ease-in-out;
   font-weight: 700;
+  position: relative;
+  border-radius: 5px !important;
+}
+.fa-house {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+  transition: 0.3s ease;
 }
 
 .home-btn button:hover {
   color: var(--profile-header-bg) !important;
   background-color: white;
+  border-width: 3px;
+}
+
+.home-btn button:hover div {
+  opacity: 0;
+}
+.home-btn button:hover .fa-house {
+  opacity: 1;
+}
+.btn:nth-child(1) {
+  border-radius: 5px 0px 0px 0px !important;
+}
+.btn:last-child {
+  border-radius: 0px 5px 0px 0px !important;
+}
+.nav-btns-content {
+  transition: 0.3s ease-in-out;
 }
