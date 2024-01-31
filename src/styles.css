@@ -1,6 +1,8 @@
 :root {
   --main-background-clr: #84a790 !important;
   --drk-background-clr: #1d4a2f;
+  --profile-header-bg: #84a790;
+  --profile-header-circles: #457154;
   --dark-text: #468942;
   --light-background-clr: #a5c8b18e;
   --large-fs-lg-screen: 48px;
@@ -40,4 +42,8 @@
 
 .text-primary {
   color: var(--main-background-clr) !important;
+}
+
+.white-border {
+  border: 2px solid white !important;
 }

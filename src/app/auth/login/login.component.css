@@ -41,6 +41,9 @@ input::placeholder {
   isolation: isolate !important;
   border-radius: 30%;
 }
+.or-text span {
+  padding-inline: 25px !important;
+}
 .forgot-password {
   color: var(--main-background-clr);
 }
@@ -129,12 +132,20 @@ input::placeholder {
     font-size: var(--small-fs-lg-screen);
     border-radius: 0px;
   }
+
   .form-parent {
     height: 90dvh !important;
   }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../assets/login-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -160,9 +171,16 @@ input::placeholder {
   .form-parent {
     height: 90dvh !important;
   }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../assets/login-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -187,9 +205,16 @@ input::placeholder {
   .form-parent {
     height: 90vh !important;
   }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../assets/login-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -201,6 +226,9 @@ input::placeholder {
   }
   label {
     font-size: var(--xxsm-fs-lg-screen) !important;
+  }
+  .or-text span {
+    padding-inline: 20px !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -211,12 +239,19 @@ input::placeholder {
     font-size: var(--xsm-fs-lg-screen);
     border-radius: 0px !important;
   }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  }
   .form-parent {
     height: 90vh !important;
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
-      url("../../../assets/signup-background.jpg");
+      url("../../../assets/login-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -228,5 +263,8 @@ input::placeholder {
   }
   label {
     font-size: var(--xxsm-fs-lg-screen) !important;
+  }
+  .or-text span {
+    padding-inline: 15px !important;
   }
 }
