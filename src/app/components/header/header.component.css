@@ -1,0 +1,40 @@
+ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+header {
+    background-image: url('../../../assets/_Aesthetics\ 1.png');
+    color: #fff;
+}
+
+.line {
+    height: 1px;
+    width: 60px;
+    background-color: #fff;
+}
+
+.login-icon {
+    display: none;
+}
+
+.navbar-toggler i {
+    color: #fff;
+    /* border: 1px solid #fff; */
+    /* padding: 10px; */
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .login-icon {
+        display: block;
+    }
+}
