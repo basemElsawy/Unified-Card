@@ -129,7 +129,7 @@ input::placeholder {
     display: none;
   }
   .login-heading {
-    font-size: var(--small-fs-lg-screen);
+    font-size: var(--large-paragraph-fs);
     border-radius: 0px;
   }
 
@@ -165,7 +165,7 @@ input::placeholder {
     display: none;
   }
   .login-heading {
-    font-size: var(--small-fs-lg-screen);
+    font-size: var(--large-paragraph-fs);
     border-radius: 0px !important;
   }
   .form-parent {
@@ -199,7 +199,7 @@ input::placeholder {
     display: none;
   }
   .login-heading {
-    font-size: var(--small-fs-lg-screen);
+    font-size: var(--large-paragraph-fs);
     border-radius: 0px !important;
   }
   .form-parent {
@@ -236,7 +236,7 @@ input::placeholder {
     display: none;
   }
   .login-heading {
-    font-size: var(--xsm-fs-lg-screen);
+    font-size: var(--xsm-paragraph-fs);
     border-radius: 0px !important;
   }
   .form-wrapper form {

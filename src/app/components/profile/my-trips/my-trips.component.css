@@ -1,0 +1,29 @@
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: var(--drk-background-clr);
+}
+.shadow-sm {
+  box-shadow: 0px 0px 4px var(--light-background-clr) !important;
+}
+.trips-container .trips-headline {
+  font-size: 16px;
+  color: var(--drk-background-clr) !important;
+  opacity: 0.8;
+}
+.trips-container .trips-description {
+  font-size: 14px;
+  color: var(--drk-background-clr) !important;
+  opacity: 0.6;
+}
+.trips-container i {
+  font-size: 18px;
+}
+.trip-wrapper {
+  transition: 0.3s ease-in-out;
+}
+
+.trip-wrapper:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}

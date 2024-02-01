@@ -1,5 +1,6 @@
 .profile-header {
   background-color: var(--profile-header-bg) !important;
+  height: 20vh;
 }
 
 .personal-data {
@@ -45,10 +46,10 @@
 }
 
 .main-content {
-  height: 100vh;
+  height: 95vh;
 }
 .content {
-  height: 74vh;
+  height: 85vh !important;
   margin-block: 0px !important;
 }
 .circle {
@@ -92,8 +93,51 @@
   border-width: 3px;
 }
 
+.profile-picture img {
+  aspect-ratio: 1;
+  border-radius: 0px 15px 15px 15px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+}
+.user-data h3 {
+  font-weight: bolder;
+  font-size: var(--medium-paragraph-fs);
+  color: var(--drk-background-clr);
+}
+.user-data p {
+  font-size: var(--xxsm-fs-lg-screen) !important;
+  color: var(--drk-background-clr);
+  opacity: 0.8;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.form-inputs {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15) !important;
+}
+.form-inputs input:disabled {
+  background-color: white;
+}
 .home-btn button:hover div {
   opacity: 0;
+}
+.form-inputs input,
+.form-inputs button {
+  font-size: 13px !important;
+  border: none !important;
+  outline: none;
+}
+
+.inputs input:disabled ~ div,
+.inputs input:focus ~ div,
+.inputs input:valid ~ div {
+  bottom: 35px !important;
+
+  left: 0px;
+}
+
+.input-title {
+  transition: 0.3s ease-in-out;
+  bottom: 9px !important;
+  left: 5px !important;
 }
 .home-btn button:hover .fa-house {
   opacity: 1;
