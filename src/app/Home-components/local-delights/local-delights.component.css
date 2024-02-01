@@ -1,0 +1,81 @@
+#wave {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  background: #84A790;
+}
+
+.downWave{
+  position: relative;
+  bottom: 10px;
+}
+.up-wave-style{
+  z-index: 999;
+}
+
+.egypt-side-photo{
+  position: relative;
+  top: -70px;
+}
+.font-style{
+
+  letter-spacing: 1.5px;
+  padding: 40px 90px !important;
+}
+
+h1::after{
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: white;
+  width: 125px;
+  height: 2px;
+  margin-top: 8px;
+}
+
+.search-form{
+  background: #E0FFEB ;
+  padding: 5px !important;
+  border-radius: 15px;
+}
+
+.border-style{
+  border-radius: 15px;
+}
+
+button{
+  background-color: #1D4A2F;
+  color: white;
+  letter-spacing: 1px;
+}
+
+button:hover{
+  background-color: #1D4A2F;
+    color: white;
+}
+
+.form-select {
+  --bs-form-select-bg-img: url("../../../assets/arrow-down.png");}
+/* #wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 80px;
+  background-color: white;
+  right: -8px;
+  top:463px ;
+}
+
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 53%;
+  height: 70px;
+  background-color: #84A790;
+  left: 0;
+  top: 451px;
+} */
