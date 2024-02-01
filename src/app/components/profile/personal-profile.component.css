@@ -15,7 +15,7 @@
 }
 .user-data-heading {
   height: 20vh;
-  background-color: var(--profile-header-bg) !important;
+  background-color: var(--xlight-background-clr) !important;
 }
 .inactive {
   display: none;
@@ -40,7 +40,8 @@
   transform: scaleY(1.1) !important ;
 
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.215);
-  /* background-color: black !important; */
+  background-color: var(--profile-header-circles) !important;
+  color: white !important;
 }
 
 .main-content {
