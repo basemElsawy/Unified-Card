@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, map, catchError, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { User } from './auth/Models/userModel';
-import { environment } from '../environments/environment.development';
+import { User } from '../auth/Models/userModel';
+import { environment } from '../../environments/environment.development';
 // import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ import { environment } from '../environments/environment.development';
 export class HttpService {
   baseUrl = environment.Base_Url;
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) { }
 
   /**
    * Developer : Eng/Basem Ashraf Mohammed
