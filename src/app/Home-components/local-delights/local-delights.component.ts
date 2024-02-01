@@ -16,17 +16,23 @@ import { Router, RouterLink } from '@angular/router';
   imports: [ReactiveFormsModule, RouterLink],
 })
 export class LocalDelightsComponent implements OnInit {
+  lang: string = 'en';
   searchForm!: FormGroup;
 
   constructor(private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.initSearchForm();
   }
 
-  initSearchForm() {
+  // this fn to init a form for seaching
+  initSearchForm(): void {
     this.searchForm = new FormGroup({
       searchOptions: new FormControl<string>(''),
     });
+  }
+  // this fn to navigate to selected service from search form
+  goToSelectedService(): void {
+    this.router.navigate(['/local-delights-services']);
   }
 }
