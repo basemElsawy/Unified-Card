@@ -4,7 +4,7 @@
   background-color: var(--drk-background-clr);
 }
 .shadow-sm {
-  box-shadow: 0px 0px 4px var(--light-background-clr) !important;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2) !important;
 }
 .trips-container .trips-headline {
   font-size: 16px;
