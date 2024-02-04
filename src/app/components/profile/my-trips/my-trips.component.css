@@ -27,3 +27,17 @@
   cursor: pointer;
   transform: translateY(-5px);
 }
+
+@media screen and (max-width: 560px) {
+  .trips-container {
+    gap: 5px !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .trips-container .trip-wrapper {
+    width: 100%;
+  }
+  /* .trips-main-wrapper {
+    padding: 0rem !important;
+  } */
+}
