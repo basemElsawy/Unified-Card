@@ -7,10 +7,10 @@
       <h2 class="fs-5">My Trips</h2>
     </div>
     <div class="col-12">
-      <div class="trips-container row gap-4 m-1 my-4">
+      <div class="trips-container row gap-2 m-1 my-4">
         @for(trip of myTrips ; track trip.id){
         <div
-          class="trip-wrapper col-3 col-xxl-3 col-xl-3 col-md-3 col-lg-3 col-sm-4 d-flex flex-column gap-2 p-2 shadow-sm"
+          class="trip-wrapper col-3 col-xxl-3 col-xl-3 col-md-4 col-lg-3 col-sm-4 d-flex flex-column gap-2 p-2 shadow-sm"
         >
           <div class="date text-muted trips-headline">{{ trip.date }}</div>
           <div

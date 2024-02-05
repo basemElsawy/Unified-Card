@@ -13,7 +13,8 @@
   --medium-paragraph-fs: 24px;
   --small-paragraph-fs: 21px;
   --xsm-paragraph-fs: 18px;
-  --xxsm-fs-lg-screen: 16px;
+  --xxsm-paragraph-fs: 16px;
+  --xxxsm-paragraph-fs: 11px;
 }
 
 @font-face {

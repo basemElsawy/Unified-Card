@@ -13,11 +13,13 @@
     </button>
   </div>
 </header>
-<main class="main-content d-flex justify-content-center align-items-end">
+<main
+  class="main-content d-flex justify-content-center align-items-xl-end align-items-xxl-end align-items-md-start align-items-lg-start"
+>
   <section id="profile-section" class="profile-wrapper container-fluid mb-2">
     <div class="row profile-section-wrapper justify-content-center gap-3 h-100">
       <div
-        id="personal-data-content "
+        id="personal-data-content"
         class="personal-data col-12 col-lg-12 col-md-12 col-xl-3 col-xxl-3 overflow-hidden h-100 bg-white rounded"
       >
         <div class="row">
@@ -100,7 +102,7 @@
       </div>
       <div
         id="meta-data-content"
-        class="col-12 col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 rounded"
+        class="meta-content col-12 col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 rounded"
       >
         <div class="btn-group">
           @for (button of buttons ; track button.id) {
@@ -108,8 +110,8 @@
             (click)="changeStateButton(button, button.link)"
             [class]="
               button.isActive
-                ? 'btn p-2 btn-1 bg-white px-4 nav-btns-content active-btn'
-                : 'btn p-2 btn-1 bg-white px-4  nav-btns-content'
+                ? 'btn p-2 btn-1  px-4 nav-btns-content active-btn'
+                : 'btn p-2 btn-1  px-4  nav-btns-content'
             "
           >
             {{ button.link }}
@@ -118,18 +120,27 @@
           }
         </div>
         <div class="personal-data meta-container bg-white">
-          <div [class]="active === 'My Trips' ? active : 'inactive'">
+          @if(active==='Trips'){
+          <div>
             <app-my-trips></app-my-trips>
           </div>
-          <div [class]="active === 'My Card' ? active : 'inactive'">
+
+          }@else if(active === 'Card'){
+
+          <div>
             <app-my-card></app-my-card>
           </div>
-          <div [class]="active === 'Balance' ? active : 'inactive'">
+          }@else if(active === 'Balance'){
+
+          <div>
             <app-balance></app-balance>
           </div>
-          <div [class]="active === 'History' ? active : 'inactive'">
+          }@else if(active ==='History'){
+
+          <div>
             <app-history></app-history>
           </div>
+          }
         </div>
       </div>
     </div>

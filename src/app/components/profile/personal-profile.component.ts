@@ -33,7 +33,7 @@ import {
 export class PersonalProfileComponent {
   active!: string;
   userDataForm!: FormGroup;
-  activeSubject: BehaviorSubject<string> = new BehaviorSubject('My Trips');
+  activeSubject: BehaviorSubject<string> = new BehaviorSubject('Trips');
   constructor(private toastr: ToastrService) {}
   userData: any = {
     userFullName: 'Muhammed Abubakr',
@@ -45,12 +45,12 @@ export class PersonalProfileComponent {
   buttons: { id: number; link: string; isActive: boolean }[] = [
     {
       id: 1,
-      link: 'My Trips',
+      link: 'Trips',
       isActive: true,
     },
     {
       id: 2,
-      link: 'My Card',
+      link: 'Card',
       isActive: false,
     },
     {
