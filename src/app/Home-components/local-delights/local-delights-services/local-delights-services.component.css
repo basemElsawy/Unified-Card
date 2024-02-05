@@ -1,0 +1,88 @@
+.header{
+  width: 100%;
+  height: 200px;
+  background: var(--main-background-clr);
+}
+.pageHeader{
+  font-size: var(--large-fs-lg-screen);
+  font-weight: bold;
+  color: white;
+}
+
+.serviceName{
+  color: white;
+  font-weight: bold;
+  font-size: var(--med-fs-lg-screen);
+  text-align: center;
+  max-width: 600px;
+}
+.serviceName::before{
+  content: "";
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: white;
+  top: 17%;
+  position: absolute;
+}
+
+.home-btn{
+  position: absolute;
+  right: 5px;
+  border: 2px solid;
+}
+.home-btn:hover{
+  background: var(--main-background-clr) ;
+  color: white;
+
+}
+.third-level{
+  font-size:25px;
+  color: var(--drk-background-clr);
+}
+
+.select-style{
+  padding: 5px 10px !important;
+}
+.label-style{
+  color: var(--drk-background-clr);
+}
+
+.mapArea{
+  width: 97%;
+  height: 400px;
+  background-color: var(--main-background-clr);
+  position: relative;
+  top: 5px;
+  border: 2px solid #c4bfbf;
+  border-radius: 10px;
+}
+.mapArea::after{
+  content: "Choose A Restaurant To Active The Map";
+  width: 55%;
+  position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 40% 24%;
+    letter-spacing: 0.5px;
+
+}
+.resturantHead{
+  width: 90%;
+  background: #84a79026;
+  border: 1px solid var(--light-background-clr);
+  border-radius: 4px;
+}
+.cardion-style{
+  padding: 10px !important;
+  color: #938b8b;
+}
+
+strong{
+      font-size: 20px;
+      padding: 0 5px !important;
+      color: var(--drk-background-clr);
+}
+
