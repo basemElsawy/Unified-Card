@@ -1,0 +1,75 @@
+ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+header {
+    background-image: url('../../../assets/_Aesthetics\ 1.png');
+    color: #fff;
+}
+
+.line {
+    height: 1px;
+    width: 60px;
+    background-color: #fff;
+}
+
+.login-icon {
+    display: none;
+}
+
+.navbar-toggler i {
+    color: #fff;
+    /* border: 1px solid #fff; */
+    /* padding: 10px; */
+}
+
+.language-login-mobile {
+    display: none !important;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .login-icon {
+        display: block;
+    }
+
+    .logo {
+        display: none !important;
+    }
+
+    .language {
+        display: none !important;
+    }
+
+    .login-button {
+        display: none !important;
+    }
+
+    .language-login-mobile {
+        display: flex !important;
+    }
+
+    header nav ul {
+        margin-top: 20px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px !important;
+    }
+
+    .authButtons {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px !important;
+    }
+
+}
