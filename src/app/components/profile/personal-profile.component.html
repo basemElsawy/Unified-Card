@@ -1,5 +1,5 @@
 <header
-  class="profile-header overflow-hidden container-fuild position-fixed top-0 end-0 start-0 container-fluid d-flex justify-content-end p-2"
+  class="profile-header overflow-hidden container-fuild position-absolute top-0 end-0 start-0 container-fluid d-flex justify-content-end p-2"
 >
   <div class="circle c-1 position-absolute"></div>
   <div class="circle c-2 position-absolute"></div>
@@ -13,31 +13,43 @@
     </button>
   </div>
 </header>
-<main class="main-content d-flex justify-content-center align-items-end">
-  <section
-    id="profile-section"
-    class="profile-wrapper container-xl container-md mb-2"
-  >
-    <div class="row gap-4 h-100">
+<main
+  class="main-content d-flex justify-content-center align-items-xl-end align-items-xxl-end align-items-md-start align-items-lg-start"
+>
+  <section id="profile-section" class="profile-wrapper container-fluid mb-2">
+    <div class="row profile-section-wrapper justify-content-center gap-3 h-100">
       <div
-        id="personal-data-content "
-        class="personal-data col-3 overflow-hidden h-100 bg-white rounded"
+        id="personal-data-content"
+        class="personal-data col-12 col-lg-12 col-md-12 col-xl-3 col-xxl-3 overflow-hidden h-100 bg-white rounded"
       >
         <div class="row">
-          <div class="col-12 user-data-heading">
-            <div class="row">
+          <div class="col-12">
+            <div
+              class="row user-data-heading h-auto align-items-md-center align-items-center align-items-xl-center"
+            >
               <div class="profile-picture col-5 p-2 img-fluid">
                 <img src="../../../assets/profile.jpg" class="w-100" alt="" />
               </div>
               <div
                 class="user-data col-7 p-1 pb-3 d-flex gap-1 flex-column align-items-start text-start justify-content-end"
               >
-                <h3 class="">Hello</h3>
-                <p class="ps-1">Muhammed Abubakr</p>
+                <h3
+                  class="w-100 text-xl-start text-xxl-start text-md-center text-lg-center text-center"
+                >
+                  Hello
+                </h3>
+                <p
+                  class="ps-1 w-100 text-center text-xxl-start text-md-center text-lg-center"
+                >
+                  Muhammed Abubakr
+                </p>
               </div>
             </div>
             <div class="row">
-              <form [formGroup]="userDataForm" class="col-12 p-3 py-5">
+              <form
+                [formGroup]="userDataForm"
+                class="col-12 user-data-form p-3 py-5"
+              >
                 <div class="row gap-5">
                   @for(control of controls; track control.id ){
 
@@ -88,15 +100,18 @@
           </div>
         </div>
       </div>
-      <div id="meta-data-content" class="col-8 rounded h-100">
+      <div
+        id="meta-data-content"
+        class="meta-content col-12 col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 rounded"
+      >
         <div class="btn-group">
           @for (button of buttons ; track button.id) {
           <button
             (click)="changeStateButton(button, button.link)"
             [class]="
               button.isActive
-                ? 'btn p-2 btn-1 bg-white px-4 nav-btns-content active-btn'
-                : 'btn p-2 btn-1 bg-white px-4  nav-btns-content'
+                ? 'btn p-2 btn-1  px-4 nav-btns-content active-btn'
+                : 'btn p-2 btn-1  px-4  nav-btns-content'
             "
           >
             {{ button.link }}
@@ -105,18 +120,27 @@
           }
         </div>
         <div class="personal-data meta-container bg-white">
-          <div [class]="active === 'My Trips' ? active : 'inactive'">
+          @if(active==='Trips'){
+          <div>
             <app-my-trips></app-my-trips>
           </div>
-          <div [class]="active === 'My Card' ? active : 'inactive'">
+
+          }@else if(active === 'Card'){
+
+          <div>
             <app-my-card></app-my-card>
           </div>
-          <div [class]="active === 'Balance' ? active : 'inactive'">
+          }@else if(active === 'Balance'){
+
+          <div>
             <app-balance></app-balance>
           </div>
-          <div [class]="active === 'History' ? active : 'inactive'">
+          }@else if(active ==='History'){
+
+          <div>
             <app-history></app-history>
           </div>
+          }
         </div>
       </div>
     </div>

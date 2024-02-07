@@ -22,9 +22,15 @@ export class MyTripsComponent {
       icon: 'fa-solid fa-location-dot',
     },
     {
-      id: 1,
+      id: 3,
       date: 'This Quarter',
       trips: '130 Trips',
+      icon: 'fa-solid fa-location-dot',
+    },
+    {
+      id: 4,
+      date: 'This year',
+      trips: '1230 Trips',
       icon: 'fa-solid fa-location-dot',
     },
   ];
