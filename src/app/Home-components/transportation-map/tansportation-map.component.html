@@ -1,3 +1,28 @@
-<p>
-  tansportation-map works!
-</p>
+<div class="mainBKGround p-5">
+  <div class="row">
+    <div class="col-6">
+      <p class="font-style-stable fw-bold font-head">
+        Transportation <span>Map</span>
+      </p>
+      <p class="font-style-stable fontSmall fw-bold">
+        Create Your Own Conveyance Plan Based On Your Location
+      </p>
+    </div>
+    <div class="col-6">
+      <form [formGroup]="planForm" class="bgColor">
+        <p class="font-style-stable fw-bold fontFormHead">
+          Plan Your Destination
+        </p>
+        <span class="p-input-icon-left w-100 my-3">
+          <i class="pi pi-map-marker"></i>
+          <input
+            class="py-1 px-2"
+            type="text"
+            pInputText
+            formControlName="currentLocation"
+          />
+        </span>
+      </form>
+    </div>
+  </div>
+</div>
