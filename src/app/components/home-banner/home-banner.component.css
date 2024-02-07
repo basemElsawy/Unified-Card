@@ -1,0 +1,32 @@
+.carousel-item img {
+    max-height: 100vh;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.wave-image {
+    max-width: 100vw;
+}
+
+.wave-image img {
+    position: absolute;
+    bottom: -180px;
+    left: 0px;
+    z-index: 1;
+    max-width: 100vw;
+}
+
+@media (max-width: 845px) {
+    .wave-image {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .wave-image img {
+        bottom: -100px;
+    }
+}

@@ -4,8 +4,13 @@ ul li {
 }
 
 header {
-    background-image: url('../../../assets/_Aesthetics\ 1.png');
+    background-color: transparent !important;
     color: #fff;
+    position: absolute;
+    top: 10px;
+    z-index: 10000;
+    min-width: 100%;
+    max-height: 100vh;
 }
 
 .line {
@@ -72,4 +77,17 @@ header {
         margin-top: 15px !important;
     }
 
+}
+
+@media (max-width: 485px) {
+    header nav ul {
+        margin-top: 10px !important;
+        gap: 3px !important;
+    }
+
+    .authButtons {
+        display: flex;
+        justify-content: center;
+        margin-top: 3px !important;
+    }
 }
