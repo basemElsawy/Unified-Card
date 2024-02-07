@@ -30,46 +30,81 @@
       </div>
     </div>
     <div class="row justify-content-center my-3">
-      <div class="resturantHead shadow">
+      <div
+        class="resturantHead shadow"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
         <p class="cardion-style">
           <strong>Vinny Pizza</strong> all delcious pizza
         </p>
       </div>
-      <!-- <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            data-bs-parent="#accordionExample"
-          >
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
+      <div class="row shadow collapse viewAnimie p-3" id="collapseExample">
+        <p class="">helllo</p>
+        <div>
+          <button class="btn locatopnbtn px-1" (click)="showMap()">
+            Show Location
+          </button>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
   <div class="col-5">
-    <div class="mapArea"></div>
+    <div class="mapArea">
+      @if(showLocation){
+      <google-map
+        height="395px"
+        width="100%"
+        [center]="center"
+        [zoom]="zoom"
+        (mapClick)="moveMap($event)"
+        (mapMousemove)="move($event)"
+      >
+        <!-- <map-marker
+          #marker="mapMarker"
+          *ngFor="let markerPosition of markerPositions"
+          [position]="markerPosition"
+          [options]="markerOptions"
+          (mapClick)="openInfoWindow(marker)"
+        >
+        </map-marker> -->
+      </google-map>
+      }
+    </div>
+    @if (showLocation){
+    <div>Latitude: {{ display?.lat }}</div>
+    <div>Longitude: {{ display?.lng }}</div>
+    }
   </div>
 </div>
+
+<!-- <p class="d-inline-flex gap-1">
+  <a
+    class="btn btn-primary"
+    data-bs-toggle="collapse"
+    href="#collapseExample"
+    role="button"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    Link with href
+  </a>
+  <button
+    class="btn btn-primary"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseExample"
+    aria-expanded="false"
+    aria-controls="collapseExample"
+  >
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by
+    default but revealed when the user activates the relevant trigger.
+  </div>
+</div> -->
