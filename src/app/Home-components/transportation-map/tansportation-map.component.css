@@ -12,22 +12,47 @@
 }
 
 .font-head{
-  font-size: var(--medPr-fs-lg-screen)
+  font-size: 35px
 }
 span{
   color: #9bd7af;
 }
 
 .fontSmall{
-  font-size: 22px;
+  font-size: 25px;
 
 }
 .fontFormHead{
   font-size: 20px;
   letter-spacing: 1.5px;
+  padding: 10px 0px 10px 50px !important;
 }
 
 .bgColor{
-  background-color: var(--light-background-clr);
+  background-color: #71947db8;
   width: 75%;
+  border-radius: 10px;
+  box-shadow: 0 0px 8px -2px rgb(48 48 48);
 }
+.input-Style{
+  display: flex;
+  justify-content: center;
+}
+.imgDots{
+  width: 10px;
+  height: 40px;
+}
+.imgRow{
+      padding: 5px 50px !important;
+}
+
+.btnStyle{
+  align-items: center;
+  background: #8ead99;
+  box-shadow: 0 0px 8px -2px rgb(48 48 48);
+}
+.btnStyle:hover{
+  color: white;
+  border: 1px white;
+}
+

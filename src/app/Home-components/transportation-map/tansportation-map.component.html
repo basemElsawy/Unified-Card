@@ -1,27 +1,56 @@
 <div class="mainBKGround p-5">
   <div class="row">
-    <div class="col-6">
+    <div class="col-6 d-grid align-content-center">
       <p class="font-style-stable fw-bold font-head">
         Transportation <span>Map</span>
       </p>
-      <p class="font-style-stable fontSmall fw-bold">
+      <p class="font-style-stable fontSmall fw-bold mt-2">
         Create Your Own Conveyance Plan Based On Your Location
       </p>
     </div>
-    <div class="col-6">
-      <form [formGroup]="planForm" class="bgColor">
+    <div class="col-6 justify-content-center d-flex">
+      <form [formGroup]="planForm" class="bgColor pt-3">
         <p class="font-style-stable fw-bold fontFormHead">
           Plan Your Destination
         </p>
-        <span class="p-input-icon-left w-100 my-3">
-          <i class="pi pi-map-marker"></i>
-          <input
-            class="py-1 px-2"
-            type="text"
-            pInputText
-            formControlName="currentLocation"
-          />
-        </span>
+        <div class="row">
+          <span class="p-input-icon-left input-Style">
+            <i class="pi pi-map-marker"></i>
+            <input
+              class="py-2 px-2 w-75"
+              type="text"
+              pInputText
+              placeholder="Current Location"
+              formControlName="currentLocation"
+            />
+          </span>
+        </div>
+        <div class="row imgRow">
+          <div class="col-2 input-Style">
+            <img src="../../../assets/dots.png" alt="dots" class="imgDots" />
+          </div>
+        </div>
+        <div class="row">
+          <span class="p-input-icon-left mb-3 input-Style">
+            <i class="pi pi-map-marker"></i>
+            <input
+              class="py-1 px-2 w-75"
+              type="text"
+              pInputText
+              placeholder="Destination"
+              formControlName="destination"
+            />
+          </span>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <button
+              class="btn font-style-stable btnStyle w-100 my-3 fw-bold py-1"
+            >
+              Plan
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   </div>
