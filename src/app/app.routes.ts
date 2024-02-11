@@ -8,6 +8,7 @@ import { TransportationMapComponent } from './Home-components/transportation-map
 
 import { HomeComponent } from './components/home/home.component';
 import { LocalDelightsServicesComponent } from './Home-components/local-delights/local-delights-services/local-delights-services.component';
+import { DestinationGuideComponent } from './Home-components/transportation-map/destination-guide/destination-guide.component';
 
 export const routes: Routes = [
   {
@@ -26,11 +27,13 @@ export const routes: Routes = [
   },
 
   { path: 'local-delights', component: LocalDelightsComponent },
-  { path: 'tansportation-map', component: TransportationMapComponent },
   {
     path: 'local-delights-services',
     component: LocalDelightsServicesComponent,
   },
+  { path: 'tansportation-map', component: TransportationMapComponent },
+
+  { path: 'destination-guide', component: DestinationGuideComponent },
   {
     path: '',
     component: HomeComponent,

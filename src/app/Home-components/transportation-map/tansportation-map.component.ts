@@ -17,7 +17,7 @@ import { InputTextModule } from 'primeng/inputtext';
 })
 export class TransportationMapComponent implements OnInit {
   planForm!: FormGroup;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.initPlanForm();
@@ -28,5 +28,8 @@ export class TransportationMapComponent implements OnInit {
       currentLocation: new FormControl(null),
       destination: new FormControl(null),
     });
+  }
+  gotToDestinationPlans() {
+    this.router.navigate(['/destination-guide']);
   }
 }

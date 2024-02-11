@@ -1,0 +1,13 @@
+.ellipseStyle{
+  width: 80px;
+  height: 80px;
+}
+.headerFont{
+  font-size: var(--med-fs-lg-screen);
+  color: var(--drk-background-clr);
+
+}
+.locationImgs-standerd{
+  width: 20px;
+  height: 20px;
+}
