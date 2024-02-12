@@ -33,6 +33,7 @@
   border-color: var(--main-background-clr) !important;
   color: var(--main-background-clr) !important;
 }
+
 .btn-outline-primary:hover {
   color: white !important;
   background-color: var(--main-background-clr) !important;
@@ -40,4 +41,8 @@
 
 .text-primary {
   color: var(--main-background-clr) !important;
+}
+
+.btn {
+  border: none !important;
 }

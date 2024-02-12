@@ -8,20 +8,229 @@
 }
 
 .wave-image {
-    max-width: 100vw;
+    max-width: 120vw;
+}
+
+.main-wrapper {
+    background-color: var(--drk-background-clr);
 }
 
 .wave-image img {
     position: absolute;
-    bottom: -180px;
+    bottom: -170px;
     left: 0px;
     z-index: 1;
-    max-width: 100vw;
+    max-width: 125vw;
+    z-index: 10000000000000;
 }
 
+
+.parent-section {
+    height: 100vh !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}
+
+h1 .light-green {
+    display: inline !important;
+
+    color: #9CE0B2 !important;
+}
+
+.main-wrapper {
+    height: 100vh !important;
+}
+
+::ng-deep button.p-carousel-prev {
+    position: absolute;
+    z-index: 10000;
+    color: white;
+    height: 100vh;
+    border: none;
+    outline: none;
+    width: 7%;
+    font-size: 32px !important;
+    background: linear-gradient(90deg, #1d4a2f8b, rgba(255, 255, 255, 0));
+    opacity: 0.5;
+    transition: .3s ease;
+}
+
+::ng-deep button.p-carousel-prev:hover {
+    opacity: 1;
+}
+
+::ng-deep button.p-carousel-next {
+    position: absolute;
+    z-index: 10000;
+    color: white;
+    height: 100vh;
+    border: none;
+    outline: none;
+    width: 7%;
+    right: 0px !important;
+    font-size: 32px !important;
+    background: linear-gradient(-90deg, var(--drk-background-clr), rgba(255, 255, 255, 0));
+    opacity: 0.5;
+    transition: 1s ease;
+}
+
+::ng-deep button.p-carousel-next:hover {
+    opacity: 1;
+}
+
+::ng-deep svg.carousel-prev-icon.p-icon {
+    width: 30px;
+    height: 30px;
+
+}
+
+::ng-deep .p-carousel-indicators {
+    display: none;
+}
+
+::ng-deep .button1 {
+    background-color: #fff;
+    color: #84A790;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 8px 13px !important;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid white;
+    letter-spacing: 1px;
+}
+
+::ng-deep .button2 {
+    background-color: transparent;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 6px 13px !important;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid white;
+    letter-spacing: 1px;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.parent-item {
+    opacity: 0;
+    transition: .6s ease-in-out;
+}
+
+.itemActive {
+    opacity: 1 !important;
+    z-index: 10000;
+
+}
+
+.btn-next-container {
+    position: absolute;
+    right: 0;
+    font-size: 32px;
+    transition: .3s ease;
+    z-index: 1000000000 !important;
+    top: 50%;
+    width: 10%;
+    cursor: pointer;
+    right: 0px;
+    transform: translateY(-50%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(-90deg, #1d4a2f, rgba(255, 255, 255, 0));
+    opacity: 0.6;
+}
+
+.btn-next-container:hover {
+    opacity: 1;
+}
+
+.btn-prev-container {
+    position: absolute;
+    left: 0;
+    font-size: 32px;
+    transition: .3s ease;
+    z-index: 1000000000 !important;
+    top: 50%;
+    width: 10%;
+    cursor: pointer;
+    right: 0px;
+    transform: translateY(-50%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(90deg, #1d4a2f, rgba(255, 255, 255, 0));
+    opacity: 0.6;
+}
+
+.btn-prev-container:hover {
+    opacity: 1;
+}
+
+/* .hero-content-wrapper {
+    padding-left: 80px;
+} */
+
+/* 
+@media screen and (min-width:1200px) and (max-width:1240px) {
+
+
+    .hero-content-wrapper {
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .text-parent h1,
+    .text-parent h3 {
+        padding: 5px !important;
+        text-align: center !important;
+
+    }
+
+    .button-wrapper {
+        margin: 0px !important;
+        justify-content: center !important;
+    }
+
+} */
+
+/* @media screen and (min-width:1024px) and (max-width:1200px) {
+    .text-parent {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+
+    .text-parent h1,
+    .text-parent h3 {
+        padding: 5px !important;
+        text-align: center !important;
+
+    }
+
+    .hero-content-wrapper {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .button-wrapper {
+        margin: 0px !important;
+    }
+
+} */
+
 @media (max-width: 845px) {
-    .wave-image {
-        display: none;
+    .wave-image img {
+        bottom: -130px;
     }
 }
 
@@ -29,4 +238,182 @@
     .wave-image img {
         bottom: -100px;
     }
+
+    ::ng-deep .button1 {
+        font-size: 16px;
+        padding: 8px 8px !important;
+    }
+
+    .button1 img,
+    .button2 img {
+        margin-left: 15px !important;
+        height: 30px;
+    }
+
+    ::ng-deep .button2 {
+        font-size: 16px;
+        padding: 6px 8px !important;
+    }
+
+    .text {
+        width: 550px !important;
+        text-align: center;
+    }
+
+    .main-text {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    /* .button-wrapper {
+        margin-right: 0 !important;
+    } */
+}
+
+@media (max-width: 650px) {
+    ::ng-deep .button1 {
+        font-size: 16px;
+        padding: 8px 8px !important;
+    }
+
+    .button1 img,
+    .button2 img {
+        margin-left: 15px !important;
+        height: 30px;
+    }
+
+    ::ng-deep .button2 {
+        font-size: 16px;
+        padding: 6px 8px !important;
+    }
+
+    .text {
+        width: 400px !important;
+    }
+
+    .text h1 {
+        font-size: 28px;
+    }
+
+    .text h3 {
+        font-size: 20px;
+    }
+
+    .wave-image img {
+        bottom: -70px;
+    }
+}
+
+@media (max-width: 570px) {
+    ::ng-deep .button1 {
+        font-size: 12px;
+        padding: 8px 8px !important;
+    }
+
+    .button1 img,
+    .button2 img {
+        margin-left: 10px !important;
+        height: 25px;
+    }
+
+    ::ng-deep .button2 {
+        font-size: 12px;
+        padding: 6px 8px !important;
+    }
+
+    .text {
+        width: 380px !important;
+    }
+
+    .text h1 {
+        font-size: 22px;
+    }
+
+    .text h3 {
+        font-size: 20px;
+    }
+
+    .hero-content-wrapper {
+        padding-left: 25px !important;
+    }
+
+    .wave-image img {
+        bottom: -20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    ::ng-deep .button1 {
+        font-size: 12px;
+        padding: 8px 8px !important;
+    }
+
+    .button1 img,
+    .button2 img {
+        margin-left: 10px !important;
+        height: 25px;
+    }
+
+    ::ng-deep .button2 {
+        font-size: 12px;
+        padding: 6px 8px !important;
+    }
+
+    .text {
+        width: 320px !important;
+    }
+
+    .text h1 {
+        font-size: 18px;
+    }
+
+    .text h3 {
+        font-size: 15px;
+    }
+
+    .hero-content-wrapper {
+        padding-left: 20px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    ::ng-deep .button1 {
+        font-size: 10px;
+        padding: 8px 8px !important;
+    }
+
+    .button1 img,
+    .button2 img {
+        margin-left: 5px !important;
+        height: 25px;
+    }
+
+    ::ng-deep .button2 {
+        font-size: 10px;
+        padding: 6px 8px !important;
+    }
+
+    .text {
+        width: 260px !important;
+    }
+
+    .text h1 {
+        font-size: 15px;
+    }
+
+    .text h3 {
+        font-size: 13px;
+    }
+
+    .hero-content-wrapper {
+        padding-left: 15px !important;
+    }
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
 }
