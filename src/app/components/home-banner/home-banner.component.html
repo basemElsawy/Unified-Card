@@ -1,0 +1,45 @@
+<section class="position-relative main-wrapper overflow-hidden">
+
+
+    @for(data of heroSectionData; track data ; let i = $index){
+    <div [style.backgroundImage]="'url(' + data.image + ')'"
+        class="parent-section position-absolute parent-item d-flex justify-content-center flex-column align-items-start w-100"
+        [ngClass]="{'itemActive':data.isActive}">
+
+        <div
+            class="row justify-content-start align-items-lg-start align-items-md-center align-items-sm-center align-items-lg-start flex-column text-white align-items-center gap-3 w-100 mx-5 ps-5 text-start main-text">
+            <div class="col-5 text-parent w-100 text">
+                <h1 [innerHTML]="sanitizer.bypassSecurityTrustHtml(data.mainHeadline)"></h1>
+                <h4>{{data.subHeadline}}</h4>
+            </div>
+            <div
+                class="col-6 button-wrapper d-flex justify-content-xl-start justify-content-lg-start justify-content-center  align-items-xl-start align-items-center">
+                <div *ngIf="data.button1" class="me-4">
+                    <button class="button1 d-flex align-items-center">{{data.button1.title}} <img
+                            src="../../../assets/carbon_map.png" class="ms-5" alt="location">
+                    </button>
+                </div>
+
+                <div *ngIf="data.button2">
+                    <button class="button2 d-flex align-items-center">
+                        {{data.button2.title}} <img src="../../../assets/Layer_1.png" class="ms-4"
+                            alt="Metro tickets"></button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>}
+    <div (click)="prevSlide()" class="btn-prev-container btn-carousel">
+        <button class="btn btn-prev text-white"><img src="../../../assets/left arrow.png" alt=""></button>
+    </div>
+    <div (click)="nextSlide()" class="btn-next-container btn-carousel">
+        <button class="btn btn-next text-white"><img src="../../../assets/rigth arrow.png" alt=""></button>
+    </div>
+
+
+    <div class="wave-image">
+        <img src="../../../assets/Vector.png" alt="">
+    </div>
+</section>

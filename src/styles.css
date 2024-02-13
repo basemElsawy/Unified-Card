@@ -39,6 +39,7 @@
   border-color: var(--main-background-clr) !important;
   color: var(--main-background-clr) !important;
 }
+
 .btn-outline-primary:hover {
   color: white !important;
 
@@ -51,4 +52,8 @@
 
 .white-border {
   border: 2px solid white !important;
+}
+
+.btn {
+  border: none !important;
 }

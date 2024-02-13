@@ -4,8 +4,13 @@ ul li {
 }
 
 header {
-    background-image: url('../../../assets/_Aesthetics\ 1.png');
+    background-color: transparent !important;
     color: #fff;
+    position: absolute;
+    top: 10px;
+    z-index: 1000000000000;
+    min-width: 100%;
+    max-height: 100vh;
 }
 
 .line {
@@ -28,6 +33,25 @@ header {
     display: none !important;
 }
 
+.close {
+    display: none;
+    position: absolute;
+    right: 30px;
+    font-weight: bolder;
+    top: 25px;
+    border: none !important;
+    color: white;
+}
+
+.collapse {
+    transition: .3s ease !important;
+
+}
+
+.navbar-collapse {
+    transition: .3s ease !important;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         display: flex !important;
@@ -37,7 +61,38 @@ header {
 
 }
 
+
+
 @media (max-width: 991px) {
+    .navbar-collapse {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        background-color: var(--drk-background-clr);
+        padding: 30px 10px !important;
+        isolation: isolate;
+        z-index: 99999999999999999 !important;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .list-items li {
+        padding: 10px !important;
+
+    }
+
+    .list-items li:hover {
+        background-color: rgba(128, 128, 128, 0.151);
+        width: 70%;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.151);
+
+    }
+
     .login-icon {
         display: block;
     }
@@ -59,11 +114,12 @@ header {
     }
 
     header nav ul {
-        margin-top: 20px !important;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px !important;
+        gap:
+            0 !important;
     }
 
     .authButtons {
@@ -72,4 +128,17 @@ header {
         margin-top: 15px !important;
     }
 
+}
+
+@media (max-width: 485px) {
+    header nav ul {
+        margin-top: 10px !important;
+        gap: 3px !important;
+    }
+
+    .authButtons {
+        display: flex;
+        justify-content: center;
+        margin-top: 3px !important;
+    }
 }
