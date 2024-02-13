@@ -13,6 +13,11 @@ header {
     max-height: 100vh;
 }
 
+select:focus {
+    outline: none;
+    border: none;
+}
+
 .line {
     height: 1px;
     width: 60px;

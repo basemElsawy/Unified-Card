@@ -59,9 +59,9 @@ export class HomeBannerComponent {
   ngOnInit() {
 
 
-    // setInterval(() => {
-    //   this.nextSlide()
-    // }, 3000);
+    setInterval(() => {
+      this.nextSlide()
+    }, 3000);
   }
 
   nextSlide() {
