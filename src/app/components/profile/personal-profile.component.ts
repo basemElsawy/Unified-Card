@@ -111,8 +111,6 @@ export class PersonalProfileComponent {
     for (const data in this.userData) {
       this.userDataForm.controls[data].disable();
       if (this.userDataForm.controls.hasOwnProperty(data)) {
-        // console.log(typeof data);
-
         this.userDataForm.controls[data].setValue(this.userData[data]);
       }
     }

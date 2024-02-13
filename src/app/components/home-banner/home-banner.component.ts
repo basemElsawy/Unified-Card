@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { DomSanitizer } from '@angular/platform-browser';
 @Component({
@@ -88,7 +88,6 @@ export class HomeBannerComponent {
   }
   prevSlide() {
     let indexOfSlider = this.heroSectionData.findIndex((item) => item.isActive);
-    console.log(indexOfSlider);
     if (indexOfSlider === 0) {
       console.log('hello');
       this.heroSectionData[0].isActive = false;
