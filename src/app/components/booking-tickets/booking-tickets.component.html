@@ -4,7 +4,7 @@
     </h2>
     <div class="boxes  mt-5">
         @for(data of allData; track data; let i = $index){
-        <div class="box">
+        <div class="box" [routerLink]="data.route">
             <div class="image position-relative" [style.backgroundImage]="'url(' + data.image + ')'">
                 <h2 class="title text-white position-absolute top-50 start-50 translate-middle fw-bold">{{ data.title }}
                 </h2>
