@@ -66,9 +66,7 @@ export class HomeBannerComponent {
 
   nextSlide() {
     let indexOfSlider = this.heroSectionData.findIndex((item) => item.isActive)
-    console.log(indexOfSlider)
     if (indexOfSlider >= this.heroSectionData.length - 1) {
-      console.log('hello')
       this.heroSectionData[indexOfSlider].isActive = false
 
       indexOfSlider = 0

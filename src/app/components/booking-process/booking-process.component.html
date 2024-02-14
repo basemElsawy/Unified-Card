@@ -1,1 +1,65 @@
-<p>booking-process works!</p>
+<div class="booking">
+    <img src="../../../assets/bookingBackground.png" alt="bookingBackground" class="booking-background">
+    <div class="booking-container">
+        <h1>Booking</h1>
+        <div class="booking-options">
+            <div class="buttons-container">
+                <h2>Choose</h2>
+                <div class="buttons mt-4">
+                    <button class="active">Daily</button>
+                    <button>Weekly</button>
+                    <button>Monthly</button>
+
+                </div>
+                <div class="image">
+                    <img src="../../../assets/ticket.png" alt="ticket">
+                </div>
+            </div>
+
+            <p class="text-center fs-5">An Option Based On Your Desired Reservation</p>
+        </div>
+        <div class="booking-procees mt-5">
+            <mat-stepper [linear]="isLinear" #stepper>
+                <mat-step label="  Details  ">
+                    <div class="details">
+                        <h2>Details</h2>
+                        <button>Daily</button>
+                    </div>
+                    <div class="total">
+
+                    </div>
+                    <button mat-button matStepperNext>Next</button>
+                </mat-step>
+                <mat-step label="  Payment Method  ">
+
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button matStepperNext>Next</button>
+                    </div>
+                </mat-step>
+                <mat-step [stepControl]="secondFormGroup" label="  Billing Cycle  ">
+                    <form [formGroup]="secondFormGroup">
+                        <mat-form-field>
+                            <mat-label>Address</mat-label>
+                            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                                required>
+                        </mat-form-field>
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <mat-step>
+                    <ng-template matStepLabel>Done</ng-template>
+                    <p>You are now done.</p>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+        </div>
+    </div>
+
+</div>
