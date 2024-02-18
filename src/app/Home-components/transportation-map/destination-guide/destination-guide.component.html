@@ -1,39 +1,183 @@
 <div class="row">
-  <div class="row">
-    <div class="col-1">
-      <img
-        src="../../../../assets/Ellipse 1.png"
-        class="ellipseStyle"
-        alt="ellipse"
-      />
-    </div>
-    <div class="col-10 ms-4">
-      <div class="row">
-        <p class="d-inline headerFont fw-bold">Your Destination Guide</p>
+  <div class="col-6">
+    <div class="row">
+      <div class="col-2">
+        <img
+          src="../../../../assets/Ellipse 1.png"
+          class="ellipseStyle"
+          alt="ellipse"
+        />
       </div>
-      <div class="row">
+      <div class="col-10">
+        <div class="row">
+          <p class="d-inline headerFont fw-bold">Your Destination Guide</p>
+        </div>
+        <div class="row">
+          <div class="col-11 destinationBox">
+            <div class="row justify-content-between">
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-2">
+                    <img
+                      src="../../../../assets/currentLocation.png"
+                      alt="Current"
+                      class="locationImgs-standerd"
+                    />
+                  </div>
+                  <div class="col-10 text-center">
+                    <p class="font-onDestination-BOX">Nasr City</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <img
+                  src="../../../../assets/two-side-arrow.png"
+                  alt="Arrow"
+                  class="imgArrow"
+                />
+              </div>
+              <div class="col-4">
+                <div class="row">
+                  <div class="col-2">
+                    <img
+                      src="../../../../assets/destinationLocation.png"
+                      alt="distination"
+                      class="locationImgs-standerd"
+                    />
+                  </div>
+                  <div class="col-10 text-center">
+                    <p class="font-onDestination-BOX">Ramsees</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5 mb-3 justify-content-center">
+      <div class="col-3 text-center" (click)="changeStatus(1)">
+        @if(activePlan1){
+        <i class="fa-solid fa-bus plansImgStyle active"></i>
+        } @else{
+        <i class="fa-solid fa-bus plansImgStyle"></i>
+        }
+        <!-- <img
+          src="../../../../assets/bus2.png"
+          alt="plane1"
+          class="plansImgStyle"
+          (click)="changeStatus()"
+        /> -->
+      </div>
+      <div class="col-3 text-center" (click)="changeStatus(2)">
+        @if(activePlan2){
+        <i class="fa-solid fa-train-subway plansImgStyle active"></i> } @else{
+        <i class="fa-solid fa-train-subway plansImgStyle"></i> }
+        <!--
         <img
-          src="../../../../assets/currentLocation.png"
-          alt="Current"
-          class="locationImgs-standerd"
+          src="../../../../assets/train2.png"
+          alt="plane2"
+          class="plansImgStyle"
+        /> -->
+      </div>
+      <div class="col-3 text-center" (click)="changeStatus(3)">
+        @if(activePlan3){
+        <i class="fa-solid fa-train-tram plansImgStyle active"></i> } @else{
+        <i class="fa-solid fa-train-tram plansImgStyle"></i> }
+
+        <!-- <img
+          src="../../../../assets/train1.png"
+          alt="plane3"
+          class="plansImgStyle"
         />
-        <div class="col-2">
-          <p>Nasr City</p>
-        </div>
-        <div class="col-2">
-          <img src="../../../../assets/two-side-arrow.png" alt="Arrow" />
-        </div>
-        <img
-          src="../../../../assets/destinationLocation.png"
-          alt="distination"
-          class="locationImgs-standerd"
-        />
-        <div class="col-2">
-          <p>Ramsees</p>
-        </div>
+      </div> -->
+      </div>
+      <div class="col-3 text-center" (click)="changeStatus(4)">
+        @if(activePlan4){
+        <i class="fa-solid fa-car plansImgStyle active"></i> } @else{
+        <i class="fa-solid fa-car plansImgStyle"></i> }
+
+        <!-- <img
+            src="../../../../assets/bus.png"
+            alt="plane4"
+            class="plansImgStyle"
+          /> -->
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 text-center">
+        <p class="steps-headFont">Steps To Your Destination</p>
       </div>
     </div>
   </div>
-  <div class="col-6"></div>
-  <div class="col-6"></div>
+  <div class="col-6">
+    <img src="../../../../assets/background.png" alt="bg" class="map-part" />
+    <div class="row mb-5">
+      <div class="col-3">
+        <button class="btn px-3 fs-4 mt-2 fw-bold home-btn">Home</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 formStyle">
+        <img
+          src="../../../../assets/decoration-upper-left.png"
+          alt="circle"
+          class="circleDecorationTopForm"
+        />
+        <div class="row">
+          <form [formGroup]="destinationForm" class="mt-3 mb-5">
+            <div class="col-12 mb-2">
+              <p class="formHeadStyle">Change Destination</p>
+            </div>
+            <div class="col-12 justify-content-center m-3">
+              <div class="row">
+                <div class="col-lg-1 col-12"></div>
+                <div class="col-lg-5 col-12 mb-2">
+                  <span class="p-input-icon-right">
+                    <i
+                      class="fa-solid fa-location-crosshairs iconInputLocation"
+                    ></i>
+                    <input
+                      class="py-2 px-2 inputForm"
+                      type="text"
+                      pInputText
+                      placeholder="Current Destination"
+                      formControlName="current"
+                    />
+                  </span>
+                </div>
+                <div class="col-lg-5 col-12">
+                  <span class="p-input-icon-right">
+                    <i class="fa-solid fa-location-dot iconInputLocation"></i>
+                    <input
+                      class="py-2 px-2 inputForm"
+                      type="text"
+                      pInputText
+                      placeholder="Destination"
+                      formControlName="destination"
+                    />
+                  </span>
+                </div>
+                <div class="col-lg-1 col-12"></div>
+              </div>
+            </div>
+            <div class="col-12 justify-content-end">
+              <div class="col-5">
+                <button
+                  class="btn font-style-stable btnStyle w-50 my-3 fw-bold py-1 ms-3"
+                >
+                  Plan
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <img
+          src="../../../../assets/decoration-down-right.png"
+          alt="circle"
+          class="circleDecorationBottomForm"
+        />
+      </div>
+    </div>
+  </div>
 </div>

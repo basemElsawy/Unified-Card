@@ -1,13 +1,140 @@
 .ellipseStyle{
   width: 80px;
   height: 80px;
+  max-width: 100%;
 }
 .headerFont{
   font-size: var(--med-fs-lg-screen);
   color: var(--drk-background-clr);
+  max-width: 100%;
 
 }
 .locationImgs-standerd{
   width: 20px;
   height: 20px;
+  margin: 5px 2px !important;
+  max-width: 100%;
 }
+.font-onDestination-BOX{
+  max-width: 100%;
+  font-size: 20px;
+  color: #698673;
+  font-weight: bold;
+}
+.imgArrow{
+  height: auto;
+  max-width: 100%;
+  margin: 11px 0 !important;
+}
+
+.destinationBox{
+  max-width: 100%;
+  box-shadow: 0 0px 8px -4px rgb(48 48 48);
+    border-radius: 8px;
+}
+
+.plansImgStyle{
+  font-size: 3vw;
+  box-shadow: 0 0px 10px -4px rgb(48 48 48);
+  border-radius: 6px;
+  color: #698673;
+  padding: 1.2vw 0 !important;
+  max-width: 100%;
+  width: 65%;
+
+}
+.active{
+  color: white;
+  background-color: #698673;
+}
+
+.steps-headFont {
+  font-size: 22px;
+  color: var(--drk-background-clr);
+  max-width: 100%;
+  font-weight: bold;
+
+}
+.map-part{
+  width: 35%;
+  height: 100vh;
+  position: absolute;
+  left: 65%;
+}
+
+.home-btn {
+  border: 1px solid var(--drk-background-clr);
+  color:var(--drk-background-clr) ;
+}
+
+.home-btn:hover {
+  background: var(--drk-background-clr);
+  color: white;
+
+}
+.formHeadStyle{
+  font-size: 1.3vw;
+  letter-spacing: 1.5px;
+  color: var(--drk-background-clr);
+  font-weight: bolder;
+  padding: 0 0 0 20px !important;
+}
+
+.formStyle{
+  z-index: 11111;
+  box-shadow: 0 0px 10px -4px rgb(48 48 48);
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  max-width: 100%;
+}
+
+.circleDecorationTopForm{
+  width: 6vw;
+  position :absolute;;
+  left: 86%;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.circleDecorationBottomForm{
+  width: 5vw;
+  position: absolute;
+  right: 100%;
+  top: calc(100% - 5vw);
+  overflow: hidden;
+  border-radius: 9px;
+  left: 0%;
+
+}
+
+.inputForm{
+  border: 1px solid;
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.col-resizable{
+  width: 10vw;
+  height: 5%;
+}
+
+.iconInputLocation{
+  position: absolute;
+  top :28%
+}
+
+.btnStyle {
+  align-items: center;
+  background: #8ead99;
+  box-shadow: 0 0px 8px -4px rgb(48 48 48);
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+}
+
+.btnStyle:hover {
+  color: white;
+  border: 1px white;
+}
+

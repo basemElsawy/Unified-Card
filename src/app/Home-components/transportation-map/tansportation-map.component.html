@@ -14,10 +14,11 @@
           Plan Your Destination
         </p>
         <div class="row">
-          <span class="p-input-icon-left input-Style">
-            <i class="pi pi-map-marker"></i>
+          <span class="p-input-icon-left input-Style d-flex">
+            <!-- <i class="pi pi-map-marker bg-white iconDesign"></i> -->
+            <i class="fa-solid fa-location-crosshairs iconDesign"></i>
             <input
-              class="py-2 px-2 w-75"
+              class="py-1 px-4 w-75"
               type="text"
               pInputText
               placeholder="Current Location"
@@ -31,16 +32,32 @@
           </div>
         </div>
         <div class="row">
-          <span class="p-input-icon-left mb-3 input-Style">
-            <i class="pi pi-map-marker"></i>
+          <span class="p-input-icon-left mb-3 input-Style d-flex">
+            <i class="fa-solid fa-location-dot iconDesign"></i>
             <input
-              class="py-1 px-2 w-75"
+              class="py-1 px-4 w-75"
               type="text"
               pInputText
               placeholder="Destination"
               formControlName="destination"
             />
           </span>
+          <!-- <div class="input-group">
+            <input
+              class="form-control border-end-0 border rounded-pill"
+              type="text"
+              value="search"
+              id="example-search-input"
+            />
+            <span class="input-group-append">
+              <button
+                class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3"
+                type="button"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div> -->
         </div>
         <div class="row justify-content-center">
           <div class="col-3">
