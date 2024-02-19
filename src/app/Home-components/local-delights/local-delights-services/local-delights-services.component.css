@@ -1,35 +1,40 @@
 .header{
   width: 100%;
-  height: 200px;
+  height: 12vw;
   background: var(--main-background-clr);
 }
 .pageHeader{
-  font-size: var(--large-fs-lg-screen);
+  font-size: 4vw;
   font-weight: bold;
   color: white;
 }
 
+.lineBefore{
+  width:7vw;
+  height: 4px;
+}
 .serviceName{
   color: white;
   font-weight: bold;
-  font-size: var(--med-fs-lg-screen);
-  text-align: center;
-  max-width: 600px;
+  font-size: 3vw;
+  /* text-align: center;
+  max-width: 600px; */
 }
-.serviceName::before{
+/* .serviceName::before{
   content: "";
   display: block;
-  width: 120px;
+  width: 115px;
   height: 2px;
   background: white;
   top: 17%;
   position: absolute;
-}
+} */
 
 .home-btn{
   position: absolute;
   right: 5px;
   border: 2px solid;
+  font-size: 2vw;
 }
 .home-btn:hover{
   background: var(--main-background-clr) ;
@@ -37,36 +42,42 @@
 
 }
 .third-level{
-  font-size:25px;
+  font-size:2.5vw;
   color: var(--drk-background-clr);
 }
 
 .select-style{
   padding: 5px 10px !important;
+  font-size: 1.2vw;
 }
 .label-style{
+  font-size: 1.5vw;
   color: var(--drk-background-clr);
 }
 
 .mapArea{
   width: 97%;
-  height: 400px;
+  height: 30vw;
   background-color: var(--main-background-clr);
   position: relative;
   top: 5px;
   border: 2px solid #c4bfbf;
   border-radius: 10px;
+
 }
 .mapArea::after{
   content: "Choose A Restaurant To Active The Map";
   width: 55%;
-  position: absolute;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 40% 24%;
-    letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
+  font-size: 1.5vw;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 30vw;
+  margin: auto;
 
 }
 .resturantHead{
@@ -77,12 +88,13 @@
   z-index: 44;
 }
 .cardion-style{
+  font-size: 1vw;
   padding: 10px !important;
   color: #938b8b;
 }
 
 strong{
-  font-size: 20px;
+  font-size: 1.5vw;
   padding: 0 5px !important;
   color: var(--drk-background-clr);
 }
@@ -93,33 +105,33 @@ strong{
 .locatopnbtn{
   background: var(--main-background-clr);
   color: white;
-  font-size: 15px;
+  font-size: 1vw;
   letter-spacing: 1.5px;
-  position: relative;
-  left: 80%;
+  /* position: relative; */
+  /* left: 80%; */
 }
 
 .map {
-  height: 100%;
+  /* height: 100%; */
   width: 97%;
 }
-@media screen and (max-width: 1150px) {
+/* @media screen and (max-width: 1150px) {
   .locatopnbtn {
   left: 72%;
 
   }
-}
-@media screen and (max-width: 1100px) {
+} */
+/* @media screen and (max-width: 1100px) {
   .locatopnbtn {
     left: 50%;
 
   }
-}
-@media screen and (max-width: 770px) {
+} */
+/* @media screen and (max-width: 770px) {
   .locatopnbtn {
     left: 70%;
     font-size: 10px;
 
   }
-}
+} */
 

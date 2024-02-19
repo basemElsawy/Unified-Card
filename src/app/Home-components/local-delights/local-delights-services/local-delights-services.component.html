@@ -1,18 +1,26 @@
 <div class="row header">
   <div class="col-10">
-    <p class="pageHeader ms-5">Local Delights</p>
-    <div class="ms-5">
-      <p class="serviceName">Showing Restaurants</p>
+    <div class="row"><p class="pageHeader ms-5">Local Delights</p></div>
+
+    <div class="row ms-5 align-items-center">
+      <img
+        src="../../../../assets/whiteLine.png"
+        alt="whitelineImg"
+        class="lineBefore"
+      />
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <p class="serviceName">Showing Restaurants</p>
+      </div>
     </div>
   </div>
   <div class="col-2">
-    <button class="btn btn-outline-light px-2 fs-4 mt-2 fw-bold home-btn">
+    <button class="btn btn-outline-light px-2 mt-2 fw-bold home-btn">
       Home
     </button>
   </div>
 </div>
 <div class="row">
-  <div class="col-7">
+  <div class="col-sm-12 col-md-8 col-lg-7">
     <div class="row">
       <div class="col-7 ms-3">
         <p class="third-level">
@@ -44,18 +52,22 @@
       <div class="row shadow collapse viewAnimie p-3" id="collapseExample">
         <p class="">helllo</p>
         <div>
-          <button class="btn locatopnbtn px-1" (click)="showMap()">
-            Show Location
-          </button>
+          <div class="row justify-content-end">
+            <div class="col-3">
+              <button class="btn locatopnbtn px-1" (click)="showMap()">
+                Show Location
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-5">
+  <div class="col-sm-12 col-md-4 col-lg-5">
     <div class="mapArea">
       @if(showLocation){
       <google-map
-        height="395px"
+        height="30vw"
         width="100%"
         [center]="center"
         [zoom]="zoom"

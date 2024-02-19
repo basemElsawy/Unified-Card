@@ -2,7 +2,8 @@
   position: relative;
   height: 500px;
   width: 100%;
-  background: var(--main-background-clr)
+  background: var(--main-background-clr);
+  z-index: -1000;
 }
 
 .downWave{
@@ -17,7 +18,8 @@
   position: absolute;
   width: 450px;
   right: 0 ;
-  top: 30px
+  top: 30px;
+  z-index:-555
 }
 .font-style{
   letter-spacing: 2px;
