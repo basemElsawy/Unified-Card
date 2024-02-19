@@ -1,10 +1,10 @@
 <div class="booking">
     <img src="../../../assets/bookingBackground.png" alt="bookingBackground" class="booking-background">
     <div class="booking-container">
-        <h1>Booking</h1>
+        <h1 class="mb-2">Booking</h1>
         <div class="booking-options">
             <div class="buttons-container">
-                <h2>Choose</h2>
+                <h2 class="fs-3">Choose</h2>
                 <div class="buttons mt-4">
                     <button class="active">Daily</button>
                     <button>Weekly</button>
@@ -18,46 +18,141 @@
 
             <p class="text-center fs-5">An Option Based On Your Desired Reservation</p>
         </div>
-        <div class="booking-procees mt-5">
-            <mat-stepper [linear]="isLinear" #stepper>
+        <div class="booking-procees mt-5 mb-5">
+            <mat-stepper hide-header [linear]="isLinear" #stepper>
                 <mat-step label="  Details  ">
                     <div class="details">
                         <h2>Details</h2>
                         <button>Daily</button>
                     </div>
-                    <div class="total">
-
+                    <div class="total row">
+                        <div class="text col-4 me-5 ms-3 pt-2 text-center">
+                            <h3>Description</h3>
+                            <p>
+                                price is the total of the trips that you may take on one day
+                            </p>
+                        </div>
+                        <div class="total-price col-7">
+                            <div class="price d-flex justify-content-between align-items-center">
+                                <div>Price</div>
+                                <div>45LE</div>
+                            </div>
+                            <div class="tax d-flex justify-content-between align-items-center">
+                                <div>Tax</div>
+                                <div>7.5LE</div>
+                            </div>
+                            <div class="checkout d-flex justify-content-between align-items-center">
+                                <div class="all-price">Total 52.5 LE</div>
+                                <button mat-button matStepperNext class="checkout-button">Checkout</button>
+                            </div>
+                        </div>
                     </div>
-                    <button mat-button matStepperNext>Next</button>
+
                 </mat-step>
                 <mat-step label="  Payment Method  ">
-
-                    <div>
-                        <button mat-button matStepperPrevious>Back</button>
-                        <button mat-button matStepperNext>Next</button>
+                    <div class="details">
+                        <h2>Payment method</h2>
                     </div>
+                    <div class="payment-methods">
+                        <h2>How would you like to pay for the ticket?</h2>
+                        <div
+                            class="buttons d-flex justify-content-xl-start justify-content-lg-start justify-content-center gap-4 align-items-xl-start align-items- mb-3 ms-3">
+                            <div class="payment-method">
+                                <button class="button d-flex align-items-center">Unified Card <img
+                                        src="../../../assets/utcPayment.png" class="ms-5" alt="">
+                                </button>
+                            </div>
+                            <div class="payment-method">
+                                <button class="button d-flex align-items-center">debit card <img
+                                        src="../../../assets/visa.png" class="ms-5" alt="">
+                                    <img src="../../../assets/debtCard.png" class="ms-3" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="checkout d-flex justify-content-between ms-1 mt-3 align-items-center">
+                        <button mat-button matStepperPrevious class="back-button">Back</button>
+                        <button mat-button matStepperNext class="checkout-button">Proceed</button>
+                    </div>
+
                 </mat-step>
-                <mat-step [stepControl]="secondFormGroup" label="  Billing Cycle  ">
+                <mat-step [stepControl]="secondFormGroup" label="Billing Cycle">
+                    <div class="details">
+                        <h2>Billing Cycle</h2>
+                    </div>
                     <form [formGroup]="secondFormGroup">
-                        <mat-form-field>
-                            <mat-label>Address</mat-label>
-                            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                                required>
-                        </mat-form-field>
-                        <div>
-                            <button mat-button matStepperPrevious>Back</button>
-                            <button mat-button matStepperNext>Next</button>
+                        <div class="d-flex justify-content-between gap-2 ms-4 mb-4 billing-cycle">
+                            <div class="">
+                                <input class="form-control border mb-4" type="text" placeholder="Card Name">
+                                <input class="form-control border" type="text" placeholder="Card Number">
+                            </div>
+                            <div class="">
+                                <input class="form-control border mb-4" type="email" placeholder="Email Address">
+                                <select class="form-select border" id="countries">
+                                    <option disabled selected hidden>Select country</option>
+                                    <option value="1">Egypt</option>
+                                    <option value="2">Palastine</option>
+                                    <option value="3">Siria</option>
+                                </select>
+                            </div>
+                            <div class="">
+                                <input class="form-control border mb-4" type="text" placeholder="Postal Code">
+                                <!-- <div class="valid-date form-control"> -->
+                                <input class="form-control border" type="text" placeholder="Valid Thru">
+                                <!-- <img src="../../../assets/validThru.png" alt="validThru"> -->
+                                <!-- </div> -->
+
+                            </div>
+                            <div class="payment-cards-desktop mt-2 d-flex flex-column align-items-between">
+                                <div class="form-check mb-4 ">
+                                    <input class="form-check-input mb-4 me-2 " type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        <img src="../../../assets/visaRadio.png" alt="visa">
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input me-2" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        <img src="../../../assets/masterCard.png" alt="masterCard">
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="payment-cards-mobile mt-2 d-flex flex-column align-items-between">
+                            <div class="form-check mb-4 ">
+                                <input class="form-check-input mb-4 me-2 " type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    <img src="../../../assets/visaRadio.png" alt="visa">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input me-2" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    <img src="../../../assets/masterCard.png" alt="masterCard">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="checkout d-flex justify-content-between ms-1 mt-3 align-items-center">
+                            <button mat-button matStepperPrevious class="back-button">Back</button>
+                            <button mat-button matStepperNext class="confirm-payment-button">Confirm payment</button>
                         </div>
                     </form>
                 </mat-step>
-                <mat-step>
+                <!-- <mat-step>
                     <ng-template matStepLabel>Done</ng-template>
                     <p>You are now done.</p>
                     <div>
                         <button mat-button matStepperPrevious>Back</button>
                         <button mat-button (click)="stepper.reset()">Reset</button>
                     </div>
-                </mat-step>
+                </mat-step> -->
             </mat-stepper>
         </div>
     </div>
