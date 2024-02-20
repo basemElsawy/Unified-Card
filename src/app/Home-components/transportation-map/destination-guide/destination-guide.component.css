@@ -159,10 +159,14 @@
   border-radius: 10px;
 }
 
-/* @media screen and (max-width : 600px){
-
-
-} */
+.accordion-item:first-of-type .accordion-button {
+  padding: 10px 5px !important;
+  box-shadow: 0 0px 3px 2px #e0dada;
+  color: gray;
+}
+.dotColor{
+  color: green;
+}
 
 @keyframes example {
   from {

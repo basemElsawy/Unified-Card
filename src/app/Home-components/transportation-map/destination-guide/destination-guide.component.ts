@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
+import { AccordionModule } from 'primeng/accordion';
 import {
   GoogleMapsModule,
   MapInfoWindow,
@@ -13,7 +14,13 @@ declare const L: any;
   selector: 'app-destination-guide',
   templateUrl: './destination-guide.component.html',
   styleUrls: ['./destination-guide.component.css'],
-  imports: [ReactiveFormsModule, RouterLink, InputTextModule, GoogleMapsModule],
+  imports: [
+    ReactiveFormsModule,
+    RouterLink,
+    InputTextModule,
+    GoogleMapsModule,
+    AccordionModule,
+  ],
 })
 export class DestinationGuideComponent implements OnInit {
   activePlan1: boolean = false;
