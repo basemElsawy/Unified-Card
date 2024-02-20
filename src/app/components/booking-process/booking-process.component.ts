@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-booking-process',
   standalone: true,
@@ -13,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule,],
+    MatInputModule,
+    RouterLink],
   templateUrl: './booking-process.component.html',
   styleUrl: './booking-process.component.css'
 })

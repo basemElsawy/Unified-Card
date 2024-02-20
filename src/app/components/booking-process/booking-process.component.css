@@ -3,6 +3,20 @@
     height: 200px;
 }
 
+.home-button {
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 8px 20px !important;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
 .booking-container {
     position: absolute;
     top: 38%;
@@ -421,6 +435,11 @@ select::placeholder {
     }
 
     @media (max-width: 991px) {
+        .booking-container {
+            top: 25%;
+            transform: translate(-50%, -25%);
+        }
+
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -567,6 +586,11 @@ select::placeholder {
     }
 
     @media (max-width: 991px) {
+        .booking-container {
+            top: 30%;
+            transform: translate(-50%, -25%);
+        }
+
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -713,6 +737,11 @@ select::placeholder {
     }
 
     @media (max-width: 991px) {
+        .booking-container {
+            top: 33%;
+            transform: translate(-50%, -25%);
+        }
+
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -859,6 +888,11 @@ select::placeholder {
     }
 
     @media (max-width: 991px) {
+        .booking-container {
+            top: 38%;
+            transform: translate(-50%, -25%);
+        }
+
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -1005,6 +1039,12 @@ select::placeholder {
     }
 
     @media (max-width: 991px) {
+
+        .booking-container {
+            top: 42%;
+            transform: translate(-50%, -25%);
+        }
+
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -1152,7 +1192,7 @@ select::placeholder {
 
     @media (max-width: 991px) {
         .booking-container {
-            top: 55%;
+            top: 70%;
             transform: translate(-50%, -25%);
         }
 
