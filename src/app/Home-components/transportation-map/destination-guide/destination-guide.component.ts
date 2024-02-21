@@ -8,6 +8,7 @@ import {
   MapInfoWindow,
   MapMarker,
 } from '@angular/google-maps';
+import { GoogleMapServiceService } from '../../../services/google-map-service.service';
 declare const L: any;
 @Component({
   standalone: true,
@@ -31,10 +32,10 @@ export class DestinationGuideComponent implements OnInit {
 
   viewDetailFlag: boolean = false;
   showLocation: boolean = false;
-  display: any;
+  // display: any;
   coords: any;
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
-  constructor() {}
+  constructor(public googleService: GoogleMapServiceService) {}
 
   ngOnInit() {
     if (!navigator.geolocation) {
@@ -51,7 +52,8 @@ export class DestinationGuideComponent implements OnInit {
         13
       );
     });
-    this.watchPosition();
+    this.googleService.watchPosition();
+    // this.watchPosition();
   }
   changeStatus(planeNumber: number) {
     if (planeNumber === 1) {
@@ -76,35 +78,35 @@ export class DestinationGuideComponent implements OnInit {
     });
   }
 
-  watchPosition() {
-    let lat = 0;
-    let long = 0;
-    let id = navigator.geolocation.watchPosition(
-      (position) => {
-        console.log(
-          `lat : ${position.coords.latitude}`,
-          `long :${position.coords.longitude}`
-        );
-        if (!(position.coords.latitude == lat)) {
-          navigator.geolocation.clearWatch(id);
-        }
-      },
-      (err) => {
-        console.log(err);
-      },
-      { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
-    );
-  }
+  // watchPosition() {
+  //   let lat = 0;
+  //   let long = 0;
+  //   let id = navigator.geolocation.watchPosition(
+  //     (position) => {
+  //       console.log(
+  //         `lat : ${position.coords.latitude}`,
+  //         `long :${position.coords.longitude}`
+  //       );
+  //       if (!(position.coords.latitude == lat)) {
+  //         navigator.geolocation.clearWatch(id);
+  //       }
+  //     },
+  //     (err) => {
+  //       console.log(err);
+  //     },
+  //     { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+  //   );
+  // }
 
-  center: google.maps.LatLngLiteral = {
-    lat: 24,
-    lng: 12,
-  };
-  zoom = 4;
-  moveMap(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.center = event.latLng.toJSON();
-  }
-  move(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.display = event.latLng.toJSON();
-  }
+  // center: google.maps.LatLngLiteral = {
+  //   lat: 24,
+  //   lng: 12,
+  // };
+  // zoom = 4;
+  // moveMap(event: google.maps.MapMouseEvent) {
+  //   if (event.latLng != null) this.center = event.latLng.toJSON();
+  // }
+  // move(event: google.maps.MapMouseEvent) {
+  //   if (event.latLng != null) this.display = event.latLng.toJSON();
+  // }
 }

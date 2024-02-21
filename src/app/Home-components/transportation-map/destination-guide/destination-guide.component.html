@@ -223,10 +223,10 @@
           <google-map
             height="100%"
             width="100%"
-            [center]="center"
-            [zoom]="zoom"
-            (mapClick)="moveMap($event)"
-            (mapMousemove)="move($event)"
+            [center]="this.googleService.center"
+            [zoom]="this.googleService.zoom"
+            (mapClick)="this.googleService.moveMap($event)"
+            (mapMousemove)="this.googleService.move($event)"
           >
           </google-map>
         </div>
