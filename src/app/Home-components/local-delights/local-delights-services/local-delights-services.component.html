@@ -69,25 +69,17 @@
       <google-map
         height="30vw"
         width="100%"
-        [center]="center"
-        [zoom]="zoom"
-        (mapClick)="moveMap($event)"
-        (mapMousemove)="move($event)"
+        [center]="this.googleService.center"
+        [zoom]="this.googleService.zoom"
+        (mapClick)="this.googleService.moveMap($event)"
+        (mapMousemove)="this.googleService.move($event)"
       >
-        <!-- <map-marker
-          #marker="mapMarker"
-          *ngFor="let markerPosition of markerPositions"
-          [position]="markerPosition"
-          [options]="markerOptions"
-          (mapClick)="openInfoWindow(marker)"
-        >
-        </map-marker> -->
       </google-map>
       }
     </div>
     @if (showLocation){
-    <div>Latitude: {{ display?.lat }}</div>
-    <div>Longitude: {{ display?.lng }}</div>
+    <div>Latitude: {{ this.googleService.display?.lat }}</div>
+    <div>Longitude: {{ this.googleService.display?.lng }}</div>
     }
   </div>
 </div>

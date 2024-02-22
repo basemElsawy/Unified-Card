@@ -3,25 +3,15 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 import { AccordionModule } from 'primeng/accordion';
-import {
-  GoogleMapsModule,
-  MapInfoWindow,
-  MapMarker,
-} from '@angular/google-maps';
+import { GoogleMapsModule, MapInfoWindow } from '@angular/google-maps';
 import { GoogleMapServiceService } from '../../../services/google-map-service.service';
-declare const L: any;
+
 @Component({
   standalone: true,
   selector: 'app-destination-guide',
   templateUrl: './destination-guide.component.html',
   styleUrls: ['./destination-guide.component.css'],
-  imports: [
-    ReactiveFormsModule,
-    RouterLink,
-    InputTextModule,
-    GoogleMapsModule,
-    AccordionModule,
-  ],
+  imports: [ReactiveFormsModule, RouterLink, InputTextModule, GoogleMapsModule],
 })
 export class DestinationGuideComponent implements OnInit {
   activePlan1: boolean = false;
@@ -30,30 +20,12 @@ export class DestinationGuideComponent implements OnInit {
   activePlan4: boolean = false;
   destinationForm!: FormGroup;
 
-  viewDetailFlag: boolean = false;
-  showLocation: boolean = false;
-  // display: any;
-  coords: any;
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
   constructor(public googleService: GoogleMapServiceService) {}
 
   ngOnInit() {
-    if (!navigator.geolocation) {
-      console.log('location is not supported');
-    }
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.coords = position.coords;
-      console.log(
-        `lat : ${position.coords.latitude}`,
-        `long :${position.coords.longitude}`
-      );
-      var map = L.map('map').setView(
-        [this.coords.latitude, this.coords.longitude],
-        13
-      );
-    });
+    this.googleService.getCuurentPosition();
     this.googleService.watchPosition();
-    // this.watchPosition();
   }
   changeStatus(planeNumber: number) {
     if (planeNumber === 1) {
@@ -77,36 +49,4 @@ export class DestinationGuideComponent implements OnInit {
       destination: new FormControl(null),
     });
   }
-
-  // watchPosition() {
-  //   let lat = 0;
-  //   let long = 0;
-  //   let id = navigator.geolocation.watchPosition(
-  //     (position) => {
-  //       console.log(
-  //         `lat : ${position.coords.latitude}`,
-  //         `long :${position.coords.longitude}`
-  //       );
-  //       if (!(position.coords.latitude == lat)) {
-  //         navigator.geolocation.clearWatch(id);
-  //       }
-  //     },
-  //     (err) => {
-  //       console.log(err);
-  //     },
-  //     { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
-  //   );
-  // }
-
-  // center: google.maps.LatLngLiteral = {
-  //   lat: 24,
-  //   lng: 12,
-  // };
-  // zoom = 4;
-  // moveMap(event: google.maps.MapMouseEvent) {
-  //   if (event.latLng != null) this.center = event.latLng.toJSON();
-  // }
-  // move(event: google.maps.MapMouseEvent) {
-  //   if (event.latLng != null) this.display = event.latLng.toJSON();
-  // }
 }
