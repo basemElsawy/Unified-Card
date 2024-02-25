@@ -9,6 +9,7 @@ import { BookingProcessComponent } from './components/booking-process/booking-pr
 export const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: HomeComponent,
   },
   {

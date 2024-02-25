@@ -33,9 +33,7 @@ export class SignupComponent {
       image: new FormControl('', Validators.required),
     });
   }
-  submitForm() {
-    console.log(this.signupForm.value);
-  }
+  submitForm() {}
   // navigate() {
   //   this.router.navigate(['/login', 'signin']);
   // }

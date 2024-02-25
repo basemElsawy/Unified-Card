@@ -27,6 +27,7 @@ export class LoginComponent {
   }
   submitForm() {
     console.log(this.loginForm.value);
+    this.router.navigate(['']);
   }
   navigate() {
     this.router.navigate(['/signup']);
