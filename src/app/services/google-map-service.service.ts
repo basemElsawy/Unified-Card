@@ -1,5 +1,5 @@
 import { Injectable, ViewChild } from '@angular/core';
-import { MapInfoWindow } from '@angular/google-maps';
+// import { MapInfoWindow } from '@angular/google-maps';
 declare const L: any;
 @Injectable({
   providedIn: 'root',
@@ -7,10 +7,10 @@ declare const L: any;
 export class GoogleMapServiceService {
   display: any;
   coords: any;
-  center: google.maps.LatLngLiteral = {
-    lat: 24,
-    lng: 12,
-  };
+  // center: google.maps.LatLngLiteral = {
+  //   lat: 24,
+  //   lng: 12,
+  // };
   zoom = 4;
   constructor() {}
 
@@ -53,10 +53,10 @@ export class GoogleMapServiceService {
     );
   }
 
-  moveMap(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.center = event.latLng.toJSON();
-  }
-  move(event: google.maps.MapMouseEvent) {
-    if (event.latLng != null) this.display = event.latLng.toJSON();
-  }
+  // moveMap(event: google.maps.MapMouseEvent) {
+  //   if (event.latLng != null) this.center = event.latLng.toJSON();
+  // }
+  // move(event: google.maps.MapMouseEvent) {
+  //   if (event.latLng != null) this.display = event.latLng.toJSON();
+  // }
 }

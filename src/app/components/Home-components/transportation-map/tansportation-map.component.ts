@@ -6,14 +6,15 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-import { InputTextModule } from 'primeng/inputtext';
+// import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-tansportation-map',
   templateUrl: './tansportation-map.component.html',
   styleUrls: ['./tansportation-map.component.css'],
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink, InputTextModule],
+  imports: [ReactiveFormsModule, RouterLink],
+  //TransportationMapComponent
 })
 export class TransportationMapComponent implements OnInit {
   planForm!: FormGroup;

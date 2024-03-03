@@ -66,7 +66,8 @@
   <div class="col-sm-12 col-md-4 col-lg-5">
     <div class="mapArea">
       @if(showLocation){
-      <google-map
+      <p>map will be here</p>
+      <!-- <google-map
         height="30vw"
         width="100%"
         [center]="this.googleService.center"
@@ -74,12 +75,12 @@
         (mapClick)="this.googleService.moveMap($event)"
         (mapMousemove)="this.googleService.move($event)"
       >
-      </google-map>
+      </google-map> -->
       }
     </div>
-    @if (showLocation){
+    <!-- @if (showLocation){
     <div>Latitude: {{ this.googleService.display?.lat }}</div>
     <div>Longitude: {{ this.googleService.display?.lng }}</div>
-    }
+    } -->
   </div>
 </div>
