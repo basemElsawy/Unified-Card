@@ -21,7 +21,7 @@ export class DestinationGuideComponent implements OnInit {
   destinationForm!: FormGroup;
 
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
-  constructor() {}
+  constructor() { }
   //public googleService: GoogleMapServiceService
 
   ngOnInit() {
