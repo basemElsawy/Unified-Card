@@ -1,18 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-import { Carousel, CarouselModule } from 'primeng/carousel';
-import { ButtonModule } from 'primeng/button';
 import { DomSanitizer } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home-banner',
   standalone: true,
-  imports: [NgbCarouselModule, CarouselModule, ButtonModule],
+  imports: [NgbCarouselModule, CommonModule],
   templateUrl: './home-banner.component.html',
   styleUrl: './home-banner.component.css',
 
 })
 export class HomeBannerComponent {
-  @ViewChild('carousel') carousel!: Carousel;
 
   heroSectionData: {
     image: string, mainHeadline: string, subHeadline: string, isActive: boolean, button1?: {
