@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { DomSanitizer } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home-banner',
   standalone: true,
