@@ -136,11 +136,18 @@ input::placeholder {
     display: none;
   }
   .signup-heading {
-    font-size: var(--small-fs-lg-screen);
+    font-size: var(--large-paragraph-fs);
     border-radius: 0px;
   }
   .form-parent {
     height: 90dvh !important;
+  }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
@@ -164,11 +171,18 @@ input::placeholder {
     display: none;
   }
   .signup-heading {
-    font-size: var(--small-fs-lg-screen);
+    font-size: var(--large-paragraph-fs);
     border-radius: 0px;
   }
   .form-parent {
     height: 90dvh !important;
+  }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
@@ -191,11 +205,18 @@ input::placeholder {
     display: none;
   }
   .signup-heading {
-    font-size: var(--small-fs-lg-screen);
+    font-size: var(--large-paragraph-fs);
     border-radius: 0px;
   }
   .form-parent {
     height: 90vh !important;
+  }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),
@@ -218,11 +239,19 @@ input::placeholder {
     display: none;
   }
   .signup-heading {
-    font-size: var(--xsm-fs-lg-screen);
+    font-size: var(--xsm-paragraph-fs);
     border-radius: 0px;
   }
   .form-parent {
     height: 90vh !important;
+  }
+  .form-wrapper form {
+    background-color: white;
+    padding: 15px !important
+    ;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
   }
   #Login-content {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), white 50%),

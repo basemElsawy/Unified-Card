@@ -6,6 +6,7 @@
 .booking-tickets h2 {
     color: #468942;
     font-weight: 600;
+    font-size: 25px;
     position: relative;
     width: fit-content;
     padding-bottom: 6px;
@@ -50,4 +51,6 @@
 
 .booking-tickets .boxes .title {
     font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
 }

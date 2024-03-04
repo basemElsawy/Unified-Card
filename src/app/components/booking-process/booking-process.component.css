@@ -1,0 +1,1341 @@
+.booking-background {
+    width: 100%;
+    height: 200px;
+}
+
+.home-button {
+    font-weight: bold;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    padding: 8px 20px !important;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.booking-container {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.booking-container h1 {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 37px;
+}
+
+.booking-options {
+    background-color: #fff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 15px 20px !important;
+    width: 850px;
+
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+    margin-top: 16px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 50px;
+    /* height: 100px; */
+}
+
+.buttons-container h2 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.buttons-container .image {
+    margin-left: 50px !important;
+    margin-top: 20px !important;
+}
+
+.buttons-container .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+.buttons-container .buttons button {
+    background-color: #91B09B;
+    padding: 12px 20px !important;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    width: 130px;
+    font-size: 20px;
+}
+
+.buttons-container .buttons button.active {
+    background-color: #84A790;
+}
+
+.buttons-container .buttons button:hover {
+    background-color: #84A790;
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+    margin-top: 16px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px !important;
+}
+
+.details::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #91B09B;
+}
+
+.details h2 {
+    color: #063C18;
+    font-weight: bold;
+    padding-left: 10px !important;
+}
+
+.details button {
+    background-color: #91B09B;
+    padding: 9px 20px !important;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    width: 130px;
+    font-size: 20px;
+}
+
+.total .text {
+    margin-bottom: 15px !important;
+}
+
+.total .text h3 {
+    font-weight: bold;
+    color: #063C18;
+    font-size: 18px;
+}
+
+.total .text p {
+    color: #255435;
+    font-size: 18px;
+    line-height: 1.4;
+    text-transform: capitalize;
+}
+
+
+.total-price .price,
+.total-price .tax {
+    color: #063C18;
+    background-color: #eee;
+    padding: 13px 20px !important;
+    margin-bottom: 15px !important;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.all-price {
+    border: 1px solid #84A790;
+    color: #84A790;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 18px !important;
+    border-radius: 6px;
+}
+
+.checkout-button {
+    background-color: #91B09B;
+    padding: 9px 20px !important;
+    border-radius: 6px;
+    border: none;
+    color: #fff !important;
+    width: 130px;
+    font-size: 18px;
+}
+
+.payment-methods {
+    margin: 0px 30px !important;
+}
+
+.payment-methods h2 {
+    color: #84A790;
+    font-size: 25px;
+    margin-bottom: 18px !important;
+}
+
+::ng-deep .button {
+    background-color: #fff;
+    color: #84A790;
+    font-size: 21px;
+    font-weight: bold;
+    padding: 8px 13px !important;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid white;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    height: 45px;
+}
+
+/* #countries option:first-child {
+    color: gray;
+} */
+
+.valid-date {
+    border: 1px solid #333 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form .border {
+    border: 1px solid #333 !important;
+    padding: 6px 15px !important;
+}
+
+.payment-cards-mobile {
+    display: none !important;
+}
+
+.confirm-payment-button {
+    background-color: #91B09B;
+    padding: 9px 20px !important;
+    border-radius: 6px;
+    border: none;
+    color: #fff !important;
+    width: 130px;
+    font-size: 18px;
+}
+
+/* 
+form input,
+form select {
+    padding: 6px 15px !important;
+} */
+
+form input::placeholder,
+select::placeholder {
+    color: #264824;
+}
+
+.valid-date input {
+    border: none;
+}
+
+.valid-date input:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.confirm-payment-button {
+    background-color: #91B09B;
+    padding: 9px 15px !important;
+    border-radius: 6px;
+    border: none;
+    color: #fff !important;
+    width: 190px;
+    font-size: 18px;
+}
+
+.back-button {
+    border: 1px solid #84A790;
+    color: #858585 !important;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 6px 18px !important;
+    border-radius: 6px;
+}
+
+input::placeholder,
+select::placeholder {
+    opacity: 0.4;
+}
+
+
+
+@media (min-height: 1200px) and (max-height: 1400px) {
+    .booking-container {
+        top: 16%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 20px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+
+}
+
+@media (min-height: 991px) and (max-height: 1200px) {
+    .booking-container {
+        top: 20%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+        .booking-container {
+            top: 25%;
+            transform: translate(-50%, -25%);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 20px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-height: 850px) and (max-height: 991px) {
+    .booking-container {
+        top: 25%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+        .booking-container {
+            top: 30%;
+            transform: translate(-50%, -25%);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 20px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-height: 680px) and (max-height: 850px) {
+    .booking-container {
+        top: 30%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+        .booking-container {
+            top: 33%;
+            transform: translate(-50%, -25%);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 20px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-height: 570px) and (max-height: 680px) {
+    .booking-container {
+        top: 35%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+        .booking-container {
+            top: 38%;
+            transform: translate(-50%, -25%);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 20px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-height: 520px) and (max-height: 570px) {
+    .booking-container {
+        top: 38%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+
+        .booking-container {
+            top: 42%;
+            transform: translate(-50%, -25%);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 20px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (min-height: 50px) and (max-height: 520px) {
+    .booking-container {
+        top: 38%;
+        transform: translate(-50%, -25%);
+    }
+
+    @media (max-width: 991px) {
+        .booking-container {
+            top: 70%;
+            transform: translate(-50%, -25%);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .booking-options {
+            width: 600px;
+        }
+
+        .buttons-container .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px !important;
+        }
+
+        .buttons-container h2 {
+            text-align: center;
+            font-size: 32px !important;
+            font-weight: bold;
+        }
+
+        .image {
+            display: none;
+        }
+
+        .total {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .total .text {
+            width: fit-content;
+        }
+
+        .total .text h3 {
+            font-size: 25px;
+            margin-bottom: 15px !important;
+        }
+
+        .total .text p {
+            font-size: 17px;
+        }
+
+        .total-price {
+            width: 90% !important;
+        }
+
+
+
+        .billing-cycle {
+            margin-left: 6px !important;
+        }
+
+        .payment-cards-desktop {
+            display: none !important;
+        }
+
+        .payment-cards-mobile {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px !important;
+        }
+
+
+    }
+
+    @media (max-width: 650px) {
+        .booking-container {
+            width: 80vw;
+        }
+
+        .booking-options {
+            width: 80vw;
+        }
+
+        ::ng-deep .button {
+            background-color: #fff;
+            color: #84A790;
+            font-size: 16px;
+            padding: 8px !important;
+        }
+
+        .payment-methods img {
+            margin-left: 10px !important;
+        }
+
+
+    }
+
+    @media (max-width: 570px) {
+        .booking-container h1 {
+            color: white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 37px;
+        }
+
+        .details h2 {
+            font-size: 22px;
+        }
+
+        .buttons-container h2 {
+            font-size: 27px !important;
+        }
+
+        .payment-methods {
+            margin: 0 15px !important;
+        }
+
+        .payment-methods h2 {
+            color: #84A790;
+            font-size: 20px;
+            margin-bottom: 18px !important;
+        }
+
+        .payment-methods .form-control {
+            padding: 6px !important;
+        }
+
+        input::placeholder {
+            opacity: 0.4 !important;
+            font-size: 14px !important;
+        }
+
+        .payment-methods .buttons {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0 !important;
+        }
+
+        .payment-methods .buttons {
+            font-size: 16px;
+        }
+    }
+}

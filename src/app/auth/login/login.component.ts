@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -23,6 +27,7 @@ export class LoginComponent {
   }
   submitForm() {
     console.log(this.loginForm.value);
+    this.router.navigate(['']);
   }
   navigate() {
     this.router.navigate(['/signup']);

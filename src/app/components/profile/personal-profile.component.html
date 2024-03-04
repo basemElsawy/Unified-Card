@@ -1,0 +1,148 @@
+<header
+  class="profile-header overflow-hidden container-fuild position-absolute top-0 end-0 start-0 container-fluid d-flex justify-content-end p-2"
+>
+  <div class="circle c-1 position-absolute"></div>
+  <div class="circle c-2 position-absolute"></div>
+  <div class="home-btn">
+    <button
+      [routerLink]="['/']"
+      class="btn white-border py-1 px-4 m-1 mx-5 text-white"
+    >
+      <div>Home</div>
+      <i class="position-absolute fa-solid fa-house"></i>
+    </button>
+  </div>
+</header>
+<main
+  class="main-content d-flex justify-content-center align-items-xl-end align-items-xxl-end align-items-md-start align-items-lg-start"
+>
+  <section id="profile-section" class="profile-wrapper container-fluid mb-2">
+    <div class="row profile-section-wrapper justify-content-center gap-3 h-100">
+      <div
+        id="personal-data-content"
+        class="personal-data col-12 col-lg-12 col-md-12 col-xl-3 col-xxl-3 overflow-hidden h-100 bg-white rounded"
+      >
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="row user-data-heading h-auto align-items-md-center align-items-center align-items-xl-center"
+            >
+              <div class="profile-picture col-5 p-2 img-fluid">
+                <img src="../../../assets/profile.jpg" class="w-100" alt="" />
+              </div>
+              <div
+                class="user-data col-7 p-1 pb-3 d-flex gap-1 flex-column align-items-start text-start justify-content-end"
+              >
+                <h3
+                  class="w-100 text-xl-start text-xxl-start text-md-center text-lg-center text-center"
+                >
+                  Hello
+                </h3>
+                <p
+                  class="ps-1 w-100 text-center text-xxl-start text-md-center text-lg-center"
+                >
+                  Muhammed Abubakr
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <form
+                [formGroup]="userDataForm"
+                class="col-12 user-data-form p-3 py-5"
+              >
+                <div class="row gap-5">
+                  @for(control of controls; track control.id ){
+
+                  <div
+                    class="col-12 d-flex flex-column align-items-start justify-content-center form-inputs position-relative"
+                  >
+                    <div
+                      class="inputs d-flex justify-content-between w-100 p-1"
+                    >
+                      <input
+                        type="text"
+                        class="my-1 border-0 ms-2 position-relative"
+                        value=""
+                        [disabled]="control.isEditing"
+                        [formControlName]="control.formControl"
+                      />
+                      @if(!control.isEditing){
+
+                      <button
+                        (click)="
+                          editOnUserData(control.formControl, control.id)
+                        "
+                        class="btn edit-btn"
+                      >
+                        Edit
+                      </button>
+                      }@else{
+
+                      <button
+                        (click)="
+                          submitEditedData(control.formControl, control.id)
+                        "
+                        class="btn edit-btn"
+                      >
+                        Submit
+                      </button>
+                      }
+
+                      <div class="h6 input-title text-muted position-absolute">
+                        {{ control.title }}
+                      </div>
+                    </div>
+                  </div>
+                  }
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="meta-data-content"
+        class="meta-content col-12 col-xxl-8 col-xl-8 col-lg-12 col-md-12 col-sm-12 rounded"
+      >
+        <div class="btn-group">
+          @for (button of buttons ; track button.id) {
+          <button
+            (click)="changeStateButton(button, button.link)"
+            [class]="
+              button.isActive
+                ? 'btn p-2 btn-1  px-4 nav-btns-content active-btn'
+                : 'btn p-2 btn-1  px-4  nav-btns-content'
+            "
+          >
+            {{ button.link }}
+          </button>
+
+          }
+        </div>
+        <div class="personal-data meta-container bg-white">
+          @if(active==='Trips'){
+          <div>
+            <app-my-trips></app-my-trips>
+          </div>
+
+          }@else if(active === 'Card'){
+
+          <div>
+            <app-my-card></app-my-card>
+          </div>
+          }@else if(active === 'Balance'){
+
+          <div>
+            <app-balance></app-balance>
+          </div>
+          }@else if(active ==='History'){
+
+          <div>
+            <app-history></app-history>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
