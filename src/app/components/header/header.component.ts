@@ -9,8 +9,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @ViewChild('navbar') navbar !: ElementRef
+  @ViewChild('navbar') navbar!: ElementRef
   close() {
-    this.navbar.nativeElement.classList.remove('show')
+    this.navbar.nativeElement.classList.remove('show');
   }
 }

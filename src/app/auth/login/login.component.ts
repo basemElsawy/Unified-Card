@@ -18,7 +18,7 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 export class LoginComponent {
   lang: string = 'en';
   loginForm!: FormGroup<any>;
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   ngOnInit() {
     this.loginForm = new FormGroup({
       userName: new FormControl('', Validators.required),
@@ -26,7 +26,6 @@ export class LoginComponent {
     });
   }
   submitForm() {
-    console.log(this.loginForm.value);
     this.router.navigate(['']);
   }
   navigate() {

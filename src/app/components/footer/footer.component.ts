@@ -10,6 +10,5 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
   ngOnInit(): void {
-    console.log('hello');
   }
 }
