@@ -1,0 +1,76 @@
+<div class="mainBKGround p-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-5 col-lg-6 d-grid align-content-center">
+      <p class="font-style-stable fw-bold font-head">
+        Transportation <span>Map</span>
+      </p>
+      <p class="font-style-stable fontSmall fw-bold mt-2">
+        Create Your Own Conveyance Plan Based On Your Location
+      </p>
+    </div>
+
+    <div class="col-sm-12 col-md-7 col-lg-6 justify-content-center d-flex mt-3">
+      <form [formGroup]="planForm" class="bgColor pt-3">
+        <p class="font-style-stable fw-bold fontFormHead">
+          Plan Your Destination
+        </p>
+        <div class="row">
+          <span class="p-input-icon-left input-Style d-flex">
+            <!-- <i class="pi pi-map-marker bg-white iconDesign"></i> -->
+            <i class="fa-solid fa-location-crosshairs iconDesign"></i>
+            <input
+              class="py-1 px-4 w-75"
+              type="text"
+              pInputText
+              placeholder="Current Location"
+              formControlName="currentLocation"
+            />
+          </span>
+        </div>
+        <div class="row imgRow">
+          <div class="col-2 input-Style">
+            <img src="../../../assets/dots.png" alt="dots" class="imgDots" />
+          </div>
+        </div>
+        <div class="row">
+          <span class="p-input-icon-left mb-3 input-Style d-flex">
+            <i class="fa-solid fa-location-dot iconDesign"></i>
+            <input
+              class="py-1 px-4 w-75"
+              type="text"
+              pInputText
+              placeholder="Destination"
+              formControlName="destination"
+            />
+          </span>
+          <!-- <div class="input-group">
+            <input
+              class="form-control border-end-0 border rounded-pill"
+              type="text"
+              value="search"
+              id="example-search-input"
+            />
+            <span class="input-group-append">
+              <button
+                class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3"
+                type="button"
+              >
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div> -->
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-3">
+            <button
+              class="btn font-style-stable btnStyle w-100 my-3 fw-bold py-1"
+              (click)="gotToDestinationPlans()"
+            >
+              Plan
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

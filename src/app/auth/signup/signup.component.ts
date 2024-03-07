@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import {
   Router,
   RouterLink,
   RouterModule,
   RouterOutlet,
 } from '@angular/router';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  Validators,
+  ReactiveFormsModule,
+} from '@angular/forms';
 @Component({
   selector: 'app-signup',
   standalone: true,
@@ -29,9 +33,7 @@ export class SignupComponent {
       image: new FormControl('', Validators.required),
     });
   }
-  submitForm() {
-    console.log(this.signupForm.value);
-  }
+  submitForm() {}
   // navigate() {
   //   this.router.navigate(['/login', 'signin']);
   // }

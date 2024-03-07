@@ -1,0 +1,32 @@
+<div class="booking-tickets px-5">
+    <h2 class="main-title">
+        Booking tickets
+    </h2>
+    <div class="boxes  mt-5">
+        @for(data of allData; track data; let i = $index){
+        <div class="box" [routerLink]="data.route">
+            <div class="image position-relative" [style.backgroundImage]="'url(' + data.image + ')'">
+                <h2 class="title text-white position-absolute top-50 start-50 translate-middle fw-bold">{{ data.title }}
+                </h2>
+                <div class="icons position-absolute position-absolute bottom-0 start-0 ms-3 mb-2">
+                    <img src="../../../assets/Group 234.png" alt="book tecket" class="me-2">
+                    <img src="../../../assets/book2.png" alt="book tecket">
+
+                </div>
+            </div>
+            <div class="text">
+                <h4>Book now</h4>
+            </div>
+        </div>
+        }
+        <div class="box position-relative" style="background-color: #F2FFF7;">
+            <div class="image">
+                <h4 class="fw-bold position-absolute top-50 start-50 translate-middle" style="color: #84A790;">
+                    All Tickets
+                </h4>
+
+            </div>
+
+        </div>
+    </div>
+</div>

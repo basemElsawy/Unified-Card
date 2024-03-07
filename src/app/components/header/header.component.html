@@ -1,0 +1,69 @@
+<header
+  class="px-5 py-3 d-flex justify-content-between align-items-center navbar navbar-expand-lg bg-body-tertiary"
+>
+  <div class="d-flex language-login-mobile">
+    <button
+      class="bg-transparent text-white border border-white rounded login-icon me-3"
+    >
+      <i class="fa-solid fa-right-to-bracket px-2 py-1"></i>
+    </button>
+    <select
+      class="px-2 py-1 w-100 bg-transparent text-white border border-white rounded"
+    >
+      <option class="text-black" value="1" selected>EN</option>
+      <option class="text-black" value="2">AR</option>
+    </select>
+  </div>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <i class="fas fa-bars"></i>
+  </button>
+  <div
+    class="content d-flex justify-content-between align-items-center"
+    class="collapse navbar-collapse"
+    id="navbarTogglerDemo01"
+  >
+    <div class="language">
+      <select
+        class="px-2 py-1 w-100 bg-transparent text-white border border-white rounded"
+      >
+        <option class="text-black" value="1" selected>EN</option>
+        <option class="text-black" value="2">AR</option>
+      </select>
+    </div>
+    <nav>
+      <ul class="d-flex gap-5">
+        <li>Home</li>
+        <li>Plans</li>
+        <li class="logo d-flex gap-2 align-items-center">
+          <div class="line"></div>
+          <img src="../../../assets/logo.png" alt="logo" />
+          <div class="line"></div>
+        </li>
+        <li>Services</li>
+        <li>Reservation</li>
+      </ul>
+    </nav>
+
+    <div class="authButtons d-flex gap-2">
+      <button
+        class="bg-transparent text-white border border-white rounded px-2 py-1"
+        routerLink="/signup"
+      >
+        Signup
+      </button>
+      <button
+        class="bg-transparent text-white border border-white rounded login-button"
+      >
+        <i class="fa-solid fa-right-to-bracket px-2 py-1"></i>
+      </button>
+    </div>
+  </div>
+</header>
