@@ -8,6 +8,7 @@ import { BookingProcessComponent } from './components/booking-process/booking-pr
 import { LocalDelightsServicesComponent } from '../app/components/Home-components/local-delights/local-delights-services/local-delights-services.component';
 import { DestinationGuideComponent } from '../app/components/Home-components/transportation-map/destination-guide/destination-guide.component';
 import { LocalDelightsComponent } from './components/Home-components/local-delights/local-delights.component';
+import { TransportationMapComponent } from './components/Home-components/transportation-map/tansportation-map.component';
 export const routes: Routes = [
   {
     path: '',
@@ -39,6 +40,7 @@ export const routes: Routes = [
     component: LocalDelightsComponent,
   },
 
+  { path: 'transportation-map', component: TransportationMapComponent },
   { path: 'destination-guide', component: DestinationGuideComponent },
 
   {
