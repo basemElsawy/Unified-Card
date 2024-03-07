@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 import { AccordionModule } from 'primeng/accordion';
 import { GoogleMapsModule, MapInfoWindow } from '@angular/google-maps';
+import { GoogleMapServiceService } from '../../../../services/google-map-service.service';
 // import { GoogleMapServiceService } from '../../../services/google-map-service.service';
 
 @Component({
@@ -21,12 +22,13 @@ export class DestinationGuideComponent implements OnInit {
   destinationForm!: FormGroup;
 
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
-  constructor() { }
+  constructor(public googleService: GoogleMapServiceService) {}
   //public googleService: GoogleMapServiceService
 
   ngOnInit() {
     // this.googleService.getCuurentPosition();
     // this.googleService.watchPosition();
+    this.initDestinationForm();
   }
   changeStatus(planeNumber: number) {
     if (planeNumber === 1) {

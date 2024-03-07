@@ -1,6 +1,8 @@
 import { Component, NgModule, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { InputTextModule } from 'primeng/inputtext';
+// import { GooglePlaceDirective } from 'ngx-google-places-autocomplete';
 // import { InputTextModule } from 'primeng/inputtext';
 
 @Component({

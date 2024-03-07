@@ -32,8 +32,8 @@
 
 .home-btn{
   position: absolute;
-  right: 5px;
-  border: 2px solid;
+  right:10px;
+  border: 2px solid !important;
   font-size: 2vw;
 }
 .home-btn:hover{
@@ -57,7 +57,7 @@
 
 .mapArea{
   width: 97%;
-  height: 30vw;
+  height: 400px;
   background-color: var(--main-background-clr);
   position: relative;
   top: 5px;
@@ -76,7 +76,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 30vw;
+  height: 400px;
   margin: auto;
 
 }
@@ -99,7 +99,7 @@ strong{
   color: var(--drk-background-clr);
 }
 .cordion-text{
-  font-size: 15px;
+  font-size: 18px;
 }
 .viewAnimie{
   width: 90%;
@@ -112,7 +112,6 @@ strong{
   letter-spacing: 1.5px;
 
 }
-
 .map {
   width: 97%;
 }
@@ -121,50 +120,98 @@ strong{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .pageHeader {
-      font-size: 25px;
+      font-size: 28px;
     }
     .header {
       height: 80px;
     }
     .serviceName {
-          font-size: 18px;
+          font-size: 24px;
     }
     .home-btn {
-      font-size: 15px;
+      font-size: 18px;
     }
     .third-level {
-      font-size: 15px;
+      font-size: 18px;
     }
     .select-style {
-      font-size: 13px;
+      font-size: 14px;
     }
     .label-style {
-      font-size: 14px;
+      font-size: 18px;
     }
     .cardion-style {
-      font-size: 13px;
+      font-size: 18px;
     }
     strong {
-      font-size: 14px;
-    }
-    .mapArea::after {
-      font-size: 15px;
+      font-size: 16px;
     }
     .locatopnbtn {
-      font-size: 14px;
+      font-size: 16px;
     }
     .mapArea {
-      height: 300px;
+      height: 400px;
     }
     .mapArea::after {
-      font-size: 14px;
-      height: 300px;
+      font-size: 21px;
+      height: 400px;
     }
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .pageHeader {
+      font-size: 38px;
+    }
+
+    .header {
+      height: 120px;
+    }
+
+    .serviceName {
+      font-size: 32px;
+    }
+
+    .home-btn {
+      font-size: 24px;
+    }
+
+    .third-level {
+      font-size: 24px;
+    }
+
+    .select-style {
+      font-size: 18px;
+    }
+
+    .label-style {
+      font-size: 24px;
+    }
+
+    .cardion-style {
+      font-size: 24px;
+    }
+
+    strong {
+      font-size: 21px;
+    }
+
+    .locatopnbtn {
+      font-size: 21px;
+    }
+
+    .mapArea {
+      height: 400px;
+    }
+
+    .mapArea::after {
+      font-size: 24px;
+      height: 400px;
+    }
+    .cordion-text {
+     font-size: 24px;
+        }
 
 }
 
@@ -175,6 +222,58 @@ strong{
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .pageHeader {
+        font-size: 52px;
+      }
+
+      .header {
+        height: 150px;
+      }
+
+      .serviceName {
+        font-size: 38px;
+      }
+
+      .home-btn {
+        font-size: 28px;
+      }
+
+      .third-level {
+        font-size: 28px;
+      }
+
+      .select-style {
+        font-size: 21px;
+      }
+
+      .label-style {
+        font-size: 28px;
+      }
+
+      .cardion-style {
+        font-size: 28px;
+      }
+
+      strong {
+        font-size: 24px;
+      }
+
+      .locatopnbtn {
+        font-size: 21px;
+      }
+
+      .mapArea {
+        height: 400px;
+      }
+
+      .mapArea::after {
+        font-size: 24px;
+        height: 400px;
+      }
+
+      .cordion-text {
+        font-size: 24px;
+      }
 
 }
 

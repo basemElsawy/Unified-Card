@@ -8,7 +8,7 @@
         alt="whitelineImg"
         class="lineBefore"
       />
-      <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="col-sm-10 col-md-8 col-lg-6">
         <p class="serviceName">Showing Restaurants</p>
       </div>
     </div>
@@ -20,9 +20,9 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-sm-12 col-md-8 col-lg-7">
+  <div class="col-sm-12 col-md-7 col-lg-7">
     <div class="row">
-      <div class="col-7 ms-3">
+      <div class="col-7 ms-3 pt-2">
         <p class="third-level">
           List of the nearby restaurants based on your location
         </p>
@@ -63,19 +63,19 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-md-4 col-lg-5 d-flex justify-content-center">
+  <div class="col-sm-12 col-md-5 col-lg-5 d-flex justify-content-center">
     <div class="mapArea">
       @if(showLocation){
-      <p>map will be here</p>
-      <!-- <google-map
-        height="30vw"
+      <!-- <p>map will be here</p> -->
+      <google-map
+        height="400px"
         width="100%"
         [center]="this.googleService.center"
         [zoom]="this.googleService.zoom"
         (mapClick)="this.googleService.moveMap($event)"
         (mapMousemove)="this.googleService.move($event)"
       >
-      </google-map> -->
+      </google-map>
       }
     </div>
     <!-- @if (showLocation){

@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BookingProcessComponent } from './components/booking-process/booking-process.component';
 import { LocalDelightsServicesComponent } from '../app/components/Home-components/local-delights/local-delights-services/local-delights-services.component';
 import { DestinationGuideComponent } from '../app/components/Home-components/transportation-map/destination-guide/destination-guide.component';
+import { LocalDelightsComponent } from './components/Home-components/local-delights/local-delights.component';
 export const routes: Routes = [
   {
     path: '',
@@ -32,6 +33,10 @@ export const routes: Routes = [
   {
     path: 'local-delights-services',
     component: LocalDelightsServicesComponent,
+  },
+  {
+    path: 'local-delights',
+    component: LocalDelightsComponent,
   },
 
   { path: 'destination-guide', component: DestinationGuideComponent },
