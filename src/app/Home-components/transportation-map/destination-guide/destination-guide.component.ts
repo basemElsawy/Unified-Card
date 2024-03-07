@@ -24,8 +24,9 @@ export class DestinationGuideComponent implements OnInit {
   constructor(public googleService: GoogleMapServiceService) {}
 
   ngOnInit() {
-    this.googleService.getCuurentPosition();
-    this.googleService.watchPosition();
+    // this.googleService.getCuurentPosition();
+    // this.googleService.watchPosition();
+    this.initDestinationForm();
   }
   changeStatus(planeNumber: number) {
     if (planeNumber === 1) {

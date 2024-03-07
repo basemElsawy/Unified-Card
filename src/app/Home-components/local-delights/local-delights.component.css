@@ -65,40 +65,56 @@ button:hover{
   --bs-form-select-bg-img: url("../../../assets/arrow-down.png");
 }
 
-@media screen and (min-width: 1100px) {
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .egypt-side-photo {
-    top: 45px;
+      display: none;
 
-  }
+    }
+    #wave{
+      height: 300px;
+    }
+    h1{
+      font-size: 25px;
+    }
+   h1::after {
+          width: 60px;
+        }
+  .font-style {
+      padding: 20px 45px !important;
+      font-size: 15px;
+    }
 }
 
-@media screen and (max-width: 770px) {
-  .egypt-side-photo{
-    display: none;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .egypt-side-photo {
+      width: 300px;
 
-  }
+    }
+    #wave {
+      height: 460px;
+    }
 }
 
-/* #wave:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 80px;
-  background-color: white;
-  right: -8px;
-  top:463px ;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .egypt-side-photo {
+      width: 300px;
+
+    }
+
 }
 
-#wave:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 53%;
-  height: 70px;
-  background-color: #84A790;
-  left: 0;
-  top: 451px;
-} */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .egypt-side-photo {
+      top: 45px;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+

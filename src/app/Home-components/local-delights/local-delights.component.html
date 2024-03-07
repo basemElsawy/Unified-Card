@@ -8,7 +8,7 @@
     <!-- <div class="col-md-8 col-lg-8"> -->
     <div class="col-md-10 col-lg-8">
       <h1 class="px-5 text-white fw-bold">Local Delights</h1>
-      <p class="text-white fs-3 fw-bold font-style">
+      <p class="text-white fw-bold font-style">
         A Variety Of Delightful Local Attractions At Your Fingertips.
       </p>
     </div>
@@ -16,9 +16,9 @@
       <div class="col-sm-12 col-md-10 col-lg-6">
         <form [formGroup]="searchForm" class="mx-5 search-form border-style">
           <div class="row flex justify-content-between">
-            <div class="col-sm-7 col-md-8 col-lg-8 me-1">
+            <div class="col-sm-7 col-md-8 col-lg-8 me-1 my-1">
               <select
-                class="form-select w-100 p-2 border-style"
+                class="form-select p-2 border-style"
                 formControlName="searchOptions"
               >
                 <option value="" disabled selected>Search Services</option>
@@ -27,7 +27,7 @@
                 <option value="3">Three</option>
               </select>
             </div>
-            <div class="col-sm-3 col-md-2 col-lg-2">
+            <div class="col-sm-3 col-md-2 col-lg-2 my-1">
               <button
                 class="btn w-100 p-2 border-style"
                 (click)="goToSelectedService()"

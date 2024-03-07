@@ -234,3 +234,12 @@
     </div>
   </div>
 </div>
+
+<google-map
+  height="400px"
+  width="750px"
+  [center]="this.googleService.center"
+  [zoom]="this.googleService.zoom"
+  (mapMousemove)="this.googleService.move($event)"
+>
+</google-map>

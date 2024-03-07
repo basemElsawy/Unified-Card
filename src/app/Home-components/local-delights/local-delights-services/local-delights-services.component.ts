@@ -22,8 +22,8 @@ export class LocalDelightsServicesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.googleService.getCuurentPosition();
-    this.googleService.watchPosition();
+    // this.googleService.getCuurentPosition();
+    // this.googleService.watchPosition();
   }
 
   // this fn to show map of ur choosen resturant

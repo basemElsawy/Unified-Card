@@ -50,7 +50,7 @@
         </p>
       </div>
       <div class="row shadow collapse viewAnimie p-3" id="collapseExample">
-        <p class="">helllo</p>
+        <p class="cordion-text">helllo</p>
         <div>
           <div class="row justify-content-end">
             <div class="col-3">
@@ -63,11 +63,10 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-12 col-md-4 col-lg-5">
+  <div class="col-sm-12 col-md-4 col-lg-5 d-flex justify-content-center">
     <div class="mapArea">
       @if(showLocation){
       <google-map
-        height="30vw"
         width="100%"
         [center]="this.googleService.center"
         [zoom]="this.googleService.zoom"
@@ -78,6 +77,7 @@
       }
     </div>
     @if (showLocation){
+
     <div>Latitude: {{ this.googleService.display?.lat }}</div>
     <div>Longitude: {{ this.googleService.display?.lng }}</div>
     }
