@@ -13,6 +13,7 @@
     margin-bottom: 50px;
 }
 
+
 .main-title::after {
     content: '';
     position: absolute;

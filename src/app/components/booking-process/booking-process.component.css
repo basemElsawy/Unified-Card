@@ -191,6 +191,10 @@
     margin-bottom: 18px !important;
 }
 
+.form-check-input[type=radio] {
+    border: 1px solid #333 !important;
+}
+
 ::ng-deep .button {
     background-color: #fff;
     color: #84A790;
@@ -1362,6 +1366,21 @@ select::placeholder {
 
         .payment-methods .buttons {
             font-size: 16px;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .custom-font-size {
+            font-size: 14px !important;
+        }
+
+        .checkout {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .all-price {
+            padding-inline: 21px !important;
         }
     }
 }
