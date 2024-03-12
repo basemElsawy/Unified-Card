@@ -35,12 +35,7 @@ export const routes: Routes = [
     path: 'local-delights-services',
     component: LocalDelightsServicesComponent,
   },
-  {
-    path: 'local-delights',
-    component: LocalDelightsComponent,
-  },
 
-  { path: 'transportation-map', component: TransportationMapComponent },
   { path: 'destination-guide', component: DestinationGuideComponent },
 
   {
