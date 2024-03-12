@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    color: #84A790;
+}
+
+ul li {
+    color: #84A790;
+}
+
+.about p {
+    font-size: 16px;
+    text-align: center;
+    color: #84A790;
+    margin-right: 10px;
+    line-height: 1.7;
+    font-weight: 500;
+    position: relative;
+}
+
+.about p::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -50px;
+    background-color: #84A790;
+    height: 100%;
+    width: 1px;
+}
+
+.service ul li {
+    padding: 10px 0;
+    position: relative;
+    text-align: start;
+}
+
+.service ul li::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: -14px;
+    transform: translateX(-50%);
+    background-color: #84A790;
+    width: 20px;
+    height: 2px;
+
+}
+
+.contact p,
+.app p {
+    margin: 0;
+    margin-left: 20px;
+    color: #84A790;
+}
+
+.contact ul li {
+    text-align: start;
+    position: relative;
+}
+
+.contact ul li::before {
+    content: '';
+    position: absolute;
+    top: 21%;
+    left: -14px;
+    transform: translateX(-50%);
+    background-color: #84A790;
+    width: 20px;
+    height: 2px;
+}
+
+.app h6 {
+    color: #84A790;
+    position: relative;
+}
+
+.app h6::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: -14px;
+    transform: translateX(-50%);
+    background-color: #84A790;
+    width: 20px;
+    height: 2px;
+}
+
+.copy-right {
+    background-color: #84A790;
+    color: #fff;
+    padding: 4px 8px;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
+}
+
+@media (max-width: 991px) {
+    .boxes {
+        row-gap: 40px;
+    }
+
+    .about p::after {
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width: 576px) {
+    .col-md-3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        border-right: none;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .col-md-3 {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .col-md-3 {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .col-md-3 {
+        width: 25%;
+        text-align: center;
+    }
+} */

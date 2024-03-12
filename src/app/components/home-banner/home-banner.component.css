@@ -125,7 +125,6 @@ button:focus {
 .itemActive {
     opacity: 1 !important;
     z-index: 10000;
-
 }
 
 .btn-next-container {
@@ -173,60 +172,6 @@ button:focus {
 .btn-prev-container:hover {
     opacity: 1;
 }
-
-/* .hero-content-wrapper {
-    padding-left: 80px;
-} */
-
-/* 
-@media screen and (min-width:1200px) and (max-width:1240px) {
-
-
-    .hero-content-wrapper {
-        display: flex;
-        align-items: center !important;
-        justify-content: center !important;
-        margin: 0px !important;
-        padding: 0px !important;
-    }
-
-    .text-parent h1,
-    .text-parent h3 {
-        padding: 5px !important;
-        text-align: center !important;
-
-    }
-
-    .button-wrapper {
-        margin: 0px !important;
-        justify-content: center !important;
-    }
-
-} */
-
-/* @media screen and (min-width:1024px) and (max-width:1200px) {
-    .text-parent {
-        margin: 0px !important;
-        padding: 0px !important;
-    }
-
-    .text-parent h1,
-    .text-parent h3 {
-        padding: 5px !important;
-        text-align: center !important;
-
-    }
-
-    .hero-content-wrapper {
-        padding: 0px !important;
-        margin: 0px !important;
-    }
-
-    .button-wrapper {
-        margin: 0px !important;
-    }
-
-} */
 
 @media (max-width: 845px) {
     .wave-image img {
@@ -399,16 +344,18 @@ button:focus {
     }
 
     .text h1 {
-        font-size: 15px;
+        font-size: 15px !important;
     }
 
     .text h3 {
-        font-size: 13px;
+        font-size: 13px !important;
     }
 
     .hero-content-wrapper {
         padding-left: 15px !important;
     }
+
+
 }
 
 [type=button]:not(:disabled),
