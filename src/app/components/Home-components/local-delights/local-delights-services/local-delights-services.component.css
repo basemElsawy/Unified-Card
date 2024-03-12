@@ -120,13 +120,13 @@ strong{
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .pageHeader {
-      font-size: 28px;
+      font-size: 25px;
     }
     .header {
       height: 80px;
     }
     .serviceName {
-          font-size: 24px;
+          font-size: 21px;
     }
     .home-btn {
       font-size: 18px;
@@ -135,7 +135,7 @@ strong{
       font-size: 18px;
     }
     .select-style {
-      font-size: 14px;
+      font-size: 15px;
     }
     .label-style {
       font-size: 18px;

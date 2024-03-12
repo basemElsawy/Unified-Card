@@ -3,6 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule, MapInfoWindow } from '@angular/google-maps';
 import { Router, RouterLink } from '@angular/router';
 import { GoogleMapServiceService } from '../../../../services/google-map-service.service';
+// import { DropdownModule } from 'primeng/dropdown';
 @Component({
   selector: 'app-local-delights-services',
   standalone: true,
@@ -15,6 +16,10 @@ export class LocalDelightsServicesComponent implements OnInit {
   viewDetailFlag: boolean = false;
   showLocation: boolean = false;
   @ViewChild(MapInfoWindow) infoWindow: MapInfoWindow | undefined;
+  options: Array<{ name: string; id: number }> = [
+    { id: 1, name: 'one' },
+    { id: 2, name: 'two' },
+  ];
 
   constructor(
     private router: Router,

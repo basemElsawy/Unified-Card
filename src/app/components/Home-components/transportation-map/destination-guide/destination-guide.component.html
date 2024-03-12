@@ -1,12 +1,12 @@
 <img src="../../../../assets/background.png" alt="bg" class="map-part" />
 
-<div class="row">
-  <div class="col-sm-6 col-md-6 col-6">
+<!-- <div class="row">
+  <div class="col-sm-6 col-md-6 col-xl-6">
     <div class="row">
       <div class="col-2">
         <img
           src="../../../../assets/Ellipse 1.png"
-          class="ellipseStyle"
+          class="w-100"
           alt="ellipse"
         />
       </div>
@@ -63,11 +63,65 @@
   <div class="col-sm-3 col-md-2 col-6">
     <button class="btn px-3 fw-bold home-btn mb-5 mt-2">Home</button>
   </div>
-</div>
+</div> -->
+
 <div class="row">
-  <div class="col-sm 12 col-md-6 col-lg-6">
+  <div class="col-2 col-sm-2 col-lg-1 col-xl-1">
+    <img src="../../../../assets/Ellipse 1.png" class="w-100" alt="ellipse" />
+  </div>
+  <div class="col-7 col-sm-7 col-lg-5 col-xl-5">
+    <p class="headerFont fw-bold ps-2">Your Destination Guide</p>
+    <div class="row">
+      <div class="col-12 destinationBox">
+        <div class="row justify-content-between">
+          <div class="col-5 col-sm-4 col-md-4">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <img
+                  src="../../../../assets/currentLocation.png"
+                  alt="Current"
+                  class="locationImgs-standerd"
+                />
+              </div>
+              <div class="col-10 text-center">
+                <p class="font-onDestination-BOX vetical-middle">Nasr City</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-2 col-sm-4 col-md-4">
+            <img
+              src="../../../../assets/two-side-arrow.png"
+              alt="Arrow"
+              class="imgArrow"
+            />
+          </div>
+          <div class="col-5 col-sm-4 col-md-4">
+            <div class="row align-items-center">
+              <div class="col-2">
+                <img
+                  src="../../../../assets/destinationLocation.png"
+                  alt="distination"
+                  class="locationImgs-standerd"
+                />
+              </div>
+              <div class="col-10 text-center">
+                <p class="font-onDestination-BOX">Ramsees</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-2 col-sm-2 col-lg-6 col-xl-6">
+    <button class="btn px-3 fw-bold home-btn mb-5 mt-2">Home</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-8 col-md-6 col-lg-6">
     <div class="row mt-5 mb-3 justify-content-center">
-      <div class="col-3 text-center" (click)="changeStatus(1)">
+      <div class="col-6 col-md-3 text-center" (click)="changeStatus(1)">
         @if(activePlan1){
         <i class="fa-solid fa-bus plansImgStyle active"></i>
         } @else{
@@ -80,7 +134,7 @@
           (click)="changeStatus()"
         /> -->
       </div>
-      <div class="col-3 text-center" (click)="changeStatus(2)">
+      <div class="col-6 col-md-3 text-center" (click)="changeStatus(2)">
         @if(activePlan2){
         <i class="fa-solid fa-train-subway plansImgStyle active"></i> } @else{
         <i class="fa-solid fa-train-subway plansImgStyle"></i> }
@@ -91,7 +145,7 @@
           class="plansImgStyle"
         /> -->
       </div>
-      <div class="col-3 text-center" (click)="changeStatus(3)">
+      <div class="col-6 col-md-3 text-center" (click)="changeStatus(3)">
         @if(activePlan3){
         <i class="fa-solid fa-train-tram plansImgStyle active"></i> } @else{
         <i class="fa-solid fa-train-tram plansImgStyle"></i> }
@@ -103,7 +157,7 @@
         />
       </div> -->
       </div>
-      <div class="col-3 text-center" (click)="changeStatus(4)">
+      <div class="col-6 col-md-3 text-center" (click)="changeStatus(4)">
         @if(activePlan4){
         <i class="fa-solid fa-car plansImgStyle active"></i> } @else{
         <i class="fa-solid fa-car plansImgStyle"></i> }
@@ -116,14 +170,14 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-10 text-center">
+      <div class="col-12 text-center">
         <p class="steps-headFont">Steps To Your Destination</p>
       </div>
     </div>
     <div class="row row mt-5 mb-3">plan drows</div>
-    <div class="row ms-5 mb-3">
-      <div class="col-11">
-        <div class="accordion" id="accordionExample">
+    <div class="row mb-3">
+      <div class="col-12">
+        <div class="accordion ms-5" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button
@@ -152,7 +206,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm 12 col-md-6 col-lg-6">
+  <div class="col-sm-12 col-md-6 col-lg-6">
     <div class="row justify-content-center">
       <div class="col-10 formStyle">
         <img
@@ -220,8 +274,7 @@
     <div class="row justify-content-center">
       <div class="col-10">
         <div class="mapArea formStyle p-3">
-          <p>map will be here</p>
-          <!-- <google-map
+          <google-map
             height="100%"
             width="100%"
             [center]="this.googleService.center"
@@ -229,18 +282,18 @@
             (mapClick)="this.googleService.moveMap($event)"
             (mapMousemove)="this.googleService.move($event)"
           >
-          </google-map> -->
+          </google-map>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<google-map
+<!-- <google-map
   height="400px"
   width="750px"
   [center]="this.googleService.center"
   [zoom]="this.googleService.zoom"
   (mapMousemove)="this.googleService.move($event)"
 >
-</google-map>
+</google-map> -->

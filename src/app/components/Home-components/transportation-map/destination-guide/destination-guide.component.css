@@ -1,8 +1,8 @@
-.ellipseStyle{
+/* .ellipseStyle{
   width: 80px;
   height: 80px;
   max-width: 100%;
-}
+} */
 .headerFont{
   font-size: 3vw;
   color: var(--drk-background-clr);
@@ -42,7 +42,6 @@
   padding: 1.2vw 0 !important;
   max-width: 100%;
   width: 65%;
-
 }
 .active{
   color: white;
@@ -68,7 +67,7 @@
 
 .home-btn {
   font-size: 1.5vw;
-  border: 1px solid var(--drk-background-clr);
+  border: 1px solid var(--drk-background-clr) !important;
   color:var(--drk-background-clr) ;
 }
 
@@ -163,6 +162,10 @@
   padding: 10px 5px !important;
   box-shadow: 0 0px 3px 2px #e0dada;
   color: gray;
+  font-size: 18px;
+}
+.accordion-body {
+  font-size: 18px !important;
 }
 .dotColor{
   color: green;
@@ -182,14 +185,79 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-}
+  .headerFont{
+    font-size: 18px !important;
+    padding-top: 8px !important ;
+  }
+  .home-btn{
+    font-size: 14px;
+  }
+  .locationImgs-standerd {
+    width: 18px ;
+    height: 16px;
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+  }
+  .font-onDestination-BOX {
+    font-size: 14px;
+  }
+  .destinationBox{
+    margin-top: 10px !important;
+  }
+  .plansImgStyle {
+    font-size: 21px;
+    width: 50%;
+    margin: 10px 0 !important;
+  }
+  .steps-headFont {
+  font-size: 18px;
+  }
+  .accordion{
+    margin-left: 15px !important;
+  }
+    .accordion-item:first-of-type .accordion-button {
+      font-size: 16px !important;
+    }
+    .accordion-body {
+      font-size: 16px !important;
+    }
+    .formHeadStyle {
+      font-size: 18px;
+
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .headerFont {
+        font-size: 32px !important;
+        padding-top: 8px !important;
+      }
+      .home-btn {
+        font-size: 25px;
+      }
+      .locationImgs-standerd {
+        width: 20px;
+        height: 20px;
+      }
+      .font-onDestination-BOX {
+        font-size: 24px !important;
+      }
+      .destinationBox {
+        margin-top: 20px !important;
+      }
+      .plansImgStyle {
+        font-size: 28px  ;
+        width: 60%;
+      }
+      .accordion-item:first-of-type .accordion-button {
+        font-size: 24px !important;}
+      .accordion-body {
+        font-size: 22px !important;
+      }
+      .formHeadStyle {
+        font-size: 21px;
+      }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

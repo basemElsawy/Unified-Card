@@ -69,13 +69,31 @@ span {
   color: dimgrey;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:330px) {
   .font-head {
-      font-size: 24px
+    font-size: 18px !important;
+  }
+
+  .fontSmall {
+    font-size: 14px !important;
+  }
+     .fontFormHead {
+       font-size: 14px !important;
+     }
+
+     .bgColor {
+       width: 100% !important;
+
+     }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width:331px) and (max-width: 600px) {
+  .font-head {
+      font-size: 24px !important;
     }
   .fontSmall {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .fontFormHead {
     font-size: 16px;
