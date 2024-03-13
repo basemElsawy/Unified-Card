@@ -12,12 +12,11 @@ export class GoogleMapServiceService {
   //   lng: 12,
   // };
   zoom = 4;
-  constructor() {}
+  constructor() { }
 
   // this fn to get ur currnet location from ur device
   getCuurentPosition() {
     if (!navigator.geolocation) {
-      console.log('location is not supported');
     }
     navigator.geolocation.getCurrentPosition((position) => {
       this.coords = position.coords;
