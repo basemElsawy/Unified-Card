@@ -320,6 +320,19 @@ button:focus {
     .hero-content-wrapper {
         padding-left: 20px !important;
     }
+
+    .wave-image {
+        display: none;
+    }
+
+    .main-wrapper {
+        margin-bottom: 40px !important;
+    }
+
+    .parent-section,
+    .main-wrapper {
+        max-height: 80vh !important;
+    }
 }
 
 @media (max-width: 400px) {

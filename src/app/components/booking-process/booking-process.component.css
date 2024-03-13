@@ -191,6 +191,10 @@
     margin-bottom: 18px !important;
 }
 
+.form-check-input[type=radio] {
+    border: 1px solid #333 !important;
+}
+
 ::ng-deep .button {
     background-color: #fff;
     color: #84A790;
@@ -288,6 +292,11 @@ select::placeholder {
     }
 
     @media (max-width: 991px) {
+        .booking-container {
+            top: 20%;
+            transform: translate(-50%, -25%);
+        }
+
         .buttons-container {
             display: flex;
             flex-direction: column;
@@ -834,6 +843,11 @@ select::placeholder {
     }
 
     @media (max-width: 570px) {
+        .booking-container {
+            top: 37%;
+            transform: translate(-50%, -25%);
+        }
+
         .booking-container h1 {
             color: white;
             font-weight: bold;
@@ -877,6 +891,13 @@ select::placeholder {
 
         .payment-methods .buttons {
             font-size: 16px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .booking-container {
+            top: 42%;
+            transform: translate(-50%, -25%);
         }
     }
 }
@@ -985,6 +1006,8 @@ select::placeholder {
     }
 
     @media (max-width: 570px) {
+
+
         .booking-container h1 {
             color: white;
             font-weight: bold;
@@ -1028,6 +1051,13 @@ select::placeholder {
 
         .payment-methods .buttons {
             font-size: 16px;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .booking-container {
+            top: 40%;
+            transform: translate(-50%, -20%);
         }
     }
 }
@@ -1336,6 +1366,21 @@ select::placeholder {
 
         .payment-methods .buttons {
             font-size: 16px;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .custom-font-size {
+            font-size: 14px !important;
+        }
+
+        .checkout {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .all-price {
+            padding-inline: 21px !important;
         }
     }
 }
