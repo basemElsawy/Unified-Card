@@ -11,6 +11,8 @@
 }
 
 .up-wave-style {
+  position: relative;
+  top: -10px;
   z-index: 999;
 }
 
