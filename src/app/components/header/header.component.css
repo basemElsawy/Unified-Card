@@ -32,6 +32,7 @@ select:focus {
     color: #fff;
     /* border: 1px solid #fff; */
     /* padding: 10px; */
+
 }
 
 .language-login-mobile {
@@ -39,13 +40,14 @@ select:focus {
 }
 
 .close {
-    display: none;
     position: absolute;
-    right: 30px;
+    right: 50px;
     font-weight: bolder;
-    top: 25px;
+    top: 29px;
     border: none !important;
     color: white;
+    font-size: 18px;
+
 }
 
 .collapse {
@@ -62,8 +64,6 @@ select:focus {
         display: flex !important;
         justify-content: space-between !important;
     }
-
-
 }
 
 
@@ -75,13 +75,19 @@ select:focus {
         left: 0;
         width: 100%;
         background-color: var(--drk-background-clr);
-        padding: 30px 10px !important;
+        padding: 55px 10px 30px 10px !important;
         isolation: isolate;
         z-index: 99999999999999999 !important;
     }
 
+    .nav {
+        gap: 20px !important;
+    }
+
     .close {
-        display: block;
+        display: block !important;
+        cursor: pointer;
+        z-index: 9999999999999999999999 !important;
     }
 
     .list-items li {
@@ -124,7 +130,7 @@ select:focus {
         flex-direction: column;
         align-items: center;
         gap:
-            0 !important;
+            10 !important;
     }
 
     .authButtons {
@@ -144,6 +150,6 @@ select:focus {
     .authButtons {
         display: flex;
         justify-content: center;
-        margin-top: 3px !important;
+        margin-top: 10px !important;
     }
 }
