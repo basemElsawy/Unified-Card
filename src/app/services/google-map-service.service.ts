@@ -15,21 +15,22 @@ export class GoogleMapServiceService {
   constructor() { }
 
   // this fn to get ur currnet location from ur device
-  getCuurentPosition() {
-    if (!navigator.geolocation) {
-    }
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.coords = position.coords;
-      console.log(
-        `lat : ${position.coords.latitude}`,
-        `long :${position.coords.longitude}`
-      );
-      var map = L.map('map').setView(
-        [this.coords.latitude, this.coords.longitude],
-        13
-      );
-    });
-  }
+  // getCuurentPosition() {
+  //   if (!navigator.geolocation) {
+  //   }
+  //   navigator.geolocation.getCurrentPosition((position) => {
+  //     debugger
+  //     this.coords = position.coords;
+  //     console.log(
+  //       `lat : ${position.coords.latitude}`,
+  //       `long :${position.coords.longitude}`
+  //     );
+  //     var map = L.map('map').setView(
+  //       [this.coords.latitude, this.coords.longitude],
+  //       13
+  //     );
+  //   });
+  // }
 
   // this fn to get ur current location on every change
   watchPosition() {
