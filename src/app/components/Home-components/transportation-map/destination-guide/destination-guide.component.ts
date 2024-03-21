@@ -28,6 +28,8 @@ export class DestinationGuideComponent implements OnInit {
   map!: google.maps.Map;
   center!: google.maps.LatLngLiteral;
   address!: string;
+  directionsService = new google.maps.DirectionsService();
+  directionsRenderer = new google.maps.DirectionsRenderer();
 
   options: google.maps.MapOptions = {
     mapTypeId: 'roadmap',
@@ -57,6 +59,7 @@ export class DestinationGuideComponent implements OnInit {
       this.origin = this.center;
 
     });
+    this.directionsRenderer.setMap(this.map);
     this.destinationForm = new FormGroup({
       current: new FormControl(null),
       destination: new FormControl(null),
@@ -76,7 +79,12 @@ export class DestinationGuideComponent implements OnInit {
         }
         this.latitude = place.geometry.location.lat();
         this.longitude = place.geometry.location.lng();
+        if (!this.destination) {
+          return; // Prevent calculation if destination is not set
+        }
+        this.drawRoute();
       }
+
     });
   }
   getAddress(latitude: number, longitude: number) {
@@ -110,7 +118,64 @@ export class DestinationGuideComponent implements OnInit {
       this.activePlan2 = this.activePlan3 = this.activePlan1 = false;
     }
   }
+  drawRoute() {
+    const directionsService = new google.maps.DirectionsService();
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const map = new google.maps.Map(
+      document.getElementById('map') as HTMLElement,
+      {
+        zoom: 7,
+        center: {
+          lat: this.center?.lat,
+          lng: this.center?.lng,
+        },
+      }
+    );
+    directionsRenderer.setMap(map);
+    directionsService.route(
+      {
+        origin: `${this.center?.lat},${this.center?.lng}`,
+        destination: `${this.destination?.lat},${this.destination?.lng}`,
+        travelMode: google.maps.TravelMode.DRIVING,
+        provideRouteAlternatives: true,
+      },
+      (response: any, status) => {
+        if (status === 'OK') {
+          directionsRenderer.setDirections(response);
+          console.table('here is the response', response);
+        } else {
+          window.alert('Directions request failed due to ' + status);
+        }
+      }
+    );
+  }
 
+  // calculateAndDisplayRoute(
+  //   directionsService: google.maps.DirectionsService,
+  //   directionsRenderer: google.maps.DirectionsRenderer
+  // ) {
+  //   debugger
+  //   const map = new google.maps.Map(
+  //     document.getElementById('map') as HTMLElement,
+  //     {
+  //       zoom: 7,
+  //       // center: { lat: 41.85, lng: -87.65 },
+  //     }
+  //   );
+  //   directionsRenderer.setMap(map);
+
+  //   directionsService
+  //     .route({
+  //       origin: `${this.center?.lat},${this.center?.lng}`,
+  //       destination: `${this.destination?.lat},${this.destination?.lng}`,
+  //       travelMode: google.maps.TravelMode.DRIVING,
+  //     })
+  //     .then((response) => {
+  //       directionsRenderer.setDirections(response);
+  //       console.log(response)
+  //     })
+  //     .catch((e) => window.alert("Directions request failed due to " + status));
+  // }
 
 
 }
